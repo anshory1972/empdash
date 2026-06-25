@@ -10,7 +10,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 ROOT     = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-GEO_PATH = r"C:\WORK\ieedashboardm\data\indonesia_adm2.geojson"
+GEO_PATH = os.path.join(ROOT, "data", "geo", "indonesia_adm2.geojson")
 sys.path.insert(0, ROOT)
 
 from pipeline.aggregation import decompose, compute_custom, _load_L0
