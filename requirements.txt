@@ -1,0 +1,10 @@
+streamlit>=1.58
+pandas
+numpy
+plotly
+geopandas
+requests
+python-dotenv
+openpyxl
+sdmx1
+comtradeapicall
