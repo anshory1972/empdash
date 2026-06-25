@@ -1,0 +1,1423 @@
+year,month,category_code,category_name,yoy_growth,is_preliminary
+2012,1,cultural_rec,Barang Budaya dan Rekreasi,4.2,False
+2012,2,cultural_rec,Barang Budaya dan Rekreasi,19.0,False
+2012,3,cultural_rec,Barang Budaya dan Rekreasi,8.9,False
+2012,4,cultural_rec,Barang Budaya dan Rekreasi,3.1,False
+2012,5,cultural_rec,Barang Budaya dan Rekreasi,1.1,False
+2012,6,cultural_rec,Barang Budaya dan Rekreasi,4.0,False
+2012,7,cultural_rec,Barang Budaya dan Rekreasi,-3.4,False
+2012,8,cultural_rec,Barang Budaya dan Rekreasi,10.7,False
+2012,9,cultural_rec,Barang Budaya dan Rekreasi,4.4,False
+2012,10,cultural_rec,Barang Budaya dan Rekreasi,5.8,False
+2012,11,cultural_rec,Barang Budaya dan Rekreasi,-3.6,False
+2012,12,cultural_rec,Barang Budaya dan Rekreasi,-18.2,False
+2013,1,cultural_rec,Barang Budaya dan Rekreasi,-3.1,False
+2013,2,cultural_rec,Barang Budaya dan Rekreasi,-6.1,False
+2013,3,cultural_rec,Barang Budaya dan Rekreasi,-0.3,False
+2013,4,cultural_rec,Barang Budaya dan Rekreasi,3.4,False
+2013,5,cultural_rec,Barang Budaya dan Rekreasi,8.2,False
+2013,6,cultural_rec,Barang Budaya dan Rekreasi,5.9,False
+2013,7,cultural_rec,Barang Budaya dan Rekreasi,5.7,False
+2013,8,cultural_rec,Barang Budaya dan Rekreasi,15.6,False
+2013,9,cultural_rec,Barang Budaya dan Rekreasi,7.4,False
+2013,10,cultural_rec,Barang Budaya dan Rekreasi,14.6,False
+2013,11,cultural_rec,Barang Budaya dan Rekreasi,34.2,False
+2014,1,cultural_rec,Barang Budaya dan Rekreasi,23.1,False
+2014,2,cultural_rec,Barang Budaya dan Rekreasi,8.9,False
+2014,3,cultural_rec,Barang Budaya dan Rekreasi,0.3,False
+2014,4,cultural_rec,Barang Budaya dan Rekreasi,-7.9,False
+2014,5,cultural_rec,Barang Budaya dan Rekreasi,-9.4,False
+2014,6,cultural_rec,Barang Budaya dan Rekreasi,-11.1,False
+2014,7,cultural_rec,Barang Budaya dan Rekreasi,0.8,False
+2014,8,cultural_rec,Barang Budaya dan Rekreasi,2.2,False
+2014,9,cultural_rec,Barang Budaya dan Rekreasi,1.1,False
+2014,10,cultural_rec,Barang Budaya dan Rekreasi,-0.8,False
+2014,11,cultural_rec,Barang Budaya dan Rekreasi,-5.1,False
+2014,12,cultural_rec,Barang Budaya dan Rekreasi,-18.9,False
+2015,1,cultural_rec,Barang Budaya dan Rekreasi,-11.3,False
+2015,2,cultural_rec,Barang Budaya dan Rekreasi,-1.5,False
+2015,3,cultural_rec,Barang Budaya dan Rekreasi,4.0,False
+2015,4,cultural_rec,Barang Budaya dan Rekreasi,4.4,False
+2015,5,cultural_rec,Barang Budaya dan Rekreasi,6.0,False
+2015,6,cultural_rec,Barang Budaya dan Rekreasi,4.7,False
+2015,7,cultural_rec,Barang Budaya dan Rekreasi,-8.3,False
+2015,8,cultural_rec,Barang Budaya dan Rekreasi,-11.7,False
+2015,9,cultural_rec,Barang Budaya dan Rekreasi,-14.3,False
+2015,10,cultural_rec,Barang Budaya dan Rekreasi,-14.6,False
+2015,11,cultural_rec,Barang Budaya dan Rekreasi,-14.6,False
+2015,12,cultural_rec,Barang Budaya dan Rekreasi,-6.8,False
+2016,1,cultural_rec,Barang Budaya dan Rekreasi,-2.2,False
+2016,2,cultural_rec,Barang Budaya dan Rekreasi,-0.7,False
+2016,3,cultural_rec,Barang Budaya dan Rekreasi,-5.1,False
+2016,4,cultural_rec,Barang Budaya dan Rekreasi,5.0,False
+2016,5,cultural_rec,Barang Budaya dan Rekreasi,-1.7,False
+2016,6,cultural_rec,Barang Budaya dan Rekreasi,7.6,False
+2016,7,cultural_rec,Barang Budaya dan Rekreasi,2.0,False
+2016,8,cultural_rec,Barang Budaya dan Rekreasi,7.6,False
+2016,9,cultural_rec,Barang Budaya dan Rekreasi,15.4,False
+2016,10,cultural_rec,Barang Budaya dan Rekreasi,12.1,False
+2016,11,cultural_rec,Barang Budaya dan Rekreasi,10.7,False
+2016,12,cultural_rec,Barang Budaya dan Rekreasi,12.0,False
+2017,1,cultural_rec,Barang Budaya dan Rekreasi,7.8,False
+2017,2,cultural_rec,Barang Budaya dan Rekreasi,2.0,False
+2017,3,cultural_rec,Barang Budaya dan Rekreasi,3.5,False
+2017,4,cultural_rec,Barang Budaya dan Rekreasi,4.6,False
+2017,5,cultural_rec,Barang Budaya dan Rekreasi,10.3,False
+2017,6,cultural_rec,Barang Budaya dan Rekreasi,3.0,False
+2017,7,cultural_rec,Barang Budaya dan Rekreasi,4.6,False
+2017,8,cultural_rec,Barang Budaya dan Rekreasi,3.7,False
+2017,9,cultural_rec,Barang Budaya dan Rekreasi,-1.7,False
+2017,10,cultural_rec,Barang Budaya dan Rekreasi,0.9,False
+2017,11,cultural_rec,Barang Budaya dan Rekreasi,-1.8,False
+2017,12,cultural_rec,Barang Budaya dan Rekreasi,0.3,False
+2018,1,cultural_rec,Barang Budaya dan Rekreasi,3.1,False
+2018,2,cultural_rec,Barang Budaya dan Rekreasi,5.6,False
+2018,3,cultural_rec,Barang Budaya dan Rekreasi,2.2,False
+2018,4,cultural_rec,Barang Budaya dan Rekreasi,5.2,False
+2018,5,cultural_rec,Barang Budaya dan Rekreasi,0.4,False
+2018,6,cultural_rec,Barang Budaya dan Rekreasi,3.7,False
+2018,7,cultural_rec,Barang Budaya dan Rekreasi,5.6,False
+2018,8,cultural_rec,Barang Budaya dan Rekreasi,3.4,False
+2018,9,cultural_rec,Barang Budaya dan Rekreasi,4.3,False
+2018,10,cultural_rec,Barang Budaya dan Rekreasi,7.5,False
+2018,11,cultural_rec,Barang Budaya dan Rekreasi,10.9,False
+2018,12,cultural_rec,Barang Budaya dan Rekreasi,14.4,False
+2019,1,cultural_rec,Barang Budaya dan Rekreasi,21.5,False
+2019,2,cultural_rec,Barang Budaya dan Rekreasi,26.5,False
+2019,3,cultural_rec,Barang Budaya dan Rekreasi,14.5,False
+2019,4,cultural_rec,Barang Budaya dan Rekreasi,3.6,False
+2019,5,cultural_rec,Barang Budaya dan Rekreasi,1.0,False
+2019,6,cultural_rec,Barang Budaya dan Rekreasi,-8.8,False
+2019,7,cultural_rec,Barang Budaya dan Rekreasi,-3.9,False
+2019,8,cultural_rec,Barang Budaya dan Rekreasi,-10.8,False
+2019,9,cultural_rec,Barang Budaya dan Rekreasi,-9.8,False
+2019,10,cultural_rec,Barang Budaya dan Rekreasi,-10.6,False
+2019,11,cultural_rec,Barang Budaya dan Rekreasi,-12.0,False
+2019,12,cultural_rec,Barang Budaya dan Rekreasi,-19.6,False
+2020,1,cultural_rec,Barang Budaya dan Rekreasi,-3.2,False
+2020,2,cultural_rec,Barang Budaya dan Rekreasi,-16.8,False
+2020,3,cultural_rec,Barang Budaya dan Rekreasi,-20.5,False
+2020,4,cultural_rec,Barang Budaya dan Rekreasi,-48.5,False
+2020,5,cultural_rec,Barang Budaya dan Rekreasi,-53.7,False
+2020,6,cultural_rec,Barang Budaya dan Rekreasi,-44.6,False
+2020,7,cultural_rec,Barang Budaya dan Rekreasi,-38.7,False
+2020,8,cultural_rec,Barang Budaya dan Rekreasi,-38.2,False
+2020,9,cultural_rec,Barang Budaya dan Rekreasi,-39.5,False
+2020,10,cultural_rec,Barang Budaya dan Rekreasi,-40.6,False
+2020,11,cultural_rec,Barang Budaya dan Rekreasi,-40.3,False
+2020,12,cultural_rec,Barang Budaya dan Rekreasi,-40.0,False
+2021,1,cultural_rec,Barang Budaya dan Rekreasi,-53.0,False
+2021,2,cultural_rec,Barang Budaya dan Rekreasi,-51.0,False
+2021,3,cultural_rec,Barang Budaya dan Rekreasi,-41.9,False
+2021,4,cultural_rec,Barang Budaya dan Rekreasi,-7.8,False
+2021,5,cultural_rec,Barang Budaya dan Rekreasi,8.4,False
+2021,7,cultural_rec,Barang Budaya dan Rekreasi,-20.0,False
+2021,8,cultural_rec,Barang Budaya dan Rekreasi,-16.3,False
+2021,9,cultural_rec,Barang Budaya dan Rekreasi,-12.6,False
+2021,10,cultural_rec,Barang Budaya dan Rekreasi,-12.0,False
+2021,11,cultural_rec,Barang Budaya dan Rekreasi,-14.4,False
+2021,12,cultural_rec,Barang Budaya dan Rekreasi,-11.9,False
+2022,1,cultural_rec,Barang Budaya dan Rekreasi,-3.9,False
+2022,2,cultural_rec,Barang Budaya dan Rekreasi,-0.2,False
+2022,3,cultural_rec,Barang Budaya dan Rekreasi,-1.4,False
+2022,4,cultural_rec,Barang Budaya dan Rekreasi,0.0,False
+2022,5,cultural_rec,Barang Budaya dan Rekreasi,9.6,False
+2022,9,cultural_rec,Barang Budaya dan Rekreasi,7.1,False
+2022,10,cultural_rec,Barang Budaya dan Rekreasi,3.7,False
+2022,11,cultural_rec,Barang Budaya dan Rekreasi,5.8,False
+2022,12,cultural_rec,Barang Budaya dan Rekreasi,8.2,False
+2023,1,cultural_rec,Barang Budaya dan Rekreasi,-0.7,False
+2023,2,cultural_rec,Barang Budaya dan Rekreasi,-2.2,False
+2023,3,cultural_rec,Barang Budaya dan Rekreasi,1.1,False
+2023,4,cultural_rec,Barang Budaya dan Rekreasi,9.9,False
+2023,5,cultural_rec,Barang Budaya dan Rekreasi,-6.6,False
+2023,10,cultural_rec,Barang Budaya dan Rekreasi,-3.7,False
+2023,11,cultural_rec,Barang Budaya dan Rekreasi,-4.7,False
+2023,12,cultural_rec,Barang Budaya dan Rekreasi,-5.2,False
+2024,1,cultural_rec,Barang Budaya dan Rekreasi,-8.4,False
+2024,2,cultural_rec,Barang Budaya dan Rekreasi,-7.1,False
+2024,3,cultural_rec,Barang Budaya dan Rekreasi,-5.4,False
+2024,4,cultural_rec,Barang Budaya dan Rekreasi,-9.9,False
+2024,5,cultural_rec,Barang Budaya dan Rekreasi,-9.8,False
+2024,10,cultural_rec,Barang Budaya dan Rekreasi,-0.8,False
+2024,11,cultural_rec,Barang Budaya dan Rekreasi,-2.4,False
+2024,12,cultural_rec,Barang Budaya dan Rekreasi,0.9,False
+2025,1,cultural_rec,Barang Budaya dan Rekreasi,1.9,False
+2025,2,cultural_rec,Barang Budaya dan Rekreasi,7.5,False
+2025,3,cultural_rec,Barang Budaya dan Rekreasi,9.2,False
+2025,4,cultural_rec,Barang Budaya dan Rekreasi,3.6,False
+2025,5,cultural_rec,Barang Budaya dan Rekreasi,4.7,False
+2025,10,cultural_rec,Barang Budaya dan Rekreasi,6.7,False
+2025,11,cultural_rec,Barang Budaya dan Rekreasi,8.1,False
+2025,12,cultural_rec,Barang Budaya dan Rekreasi,5.2,False
+2026,1,cultural_rec,Barang Budaya dan Rekreasi,15.9,False
+2026,2,cultural_rec,Barang Budaya dan Rekreasi,10.1,False
+2026,3,cultural_rec,Barang Budaya dan Rekreasi,14.8,False
+2026,4,cultural_rec,Barang Budaya dan Rekreasi,0.7,False
+2026,4,cultural_rec,Barang Budaya dan Rekreasi,-14.1,False
+2026,5,cultural_rec,Barang Budaya dan Rekreasi,0.6,True
+2026,5,cultural_rec,Barang Budaya dan Rekreasi,-0.1,True
+2012,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",15.1,False
+2012,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",11.4,False
+2012,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",13.4,False
+2012,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.9,False
+2012,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.1,False
+2012,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",11.8,False
+2012,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",19.9,False
+2012,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.7,False
+2012,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",19.9,False
+2012,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",16.5,False
+2012,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",14.8,False
+2012,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",15.0,False
+2013,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.9,False
+2013,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.8,False
+2013,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.5,False
+2013,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",0.3,False
+2013,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.6,False
+2013,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",11.6,False
+2013,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.7,False
+2013,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-4.5,False
+2013,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.0,False
+2013,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.3,False
+2013,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.9,False
+2014,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",17.6,False
+2014,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",15.8,False
+2014,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",19.1,False
+2014,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",20.7,False
+2014,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",17.7,False
+2014,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.4,False
+2014,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",25.2,False
+2014,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",11.0,False
+2014,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",18.4,False
+2014,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",17.2,False
+2014,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",15.3,False
+2014,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.3,False
+2015,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",16.4,False
+2015,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",24.6,False
+2015,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",25.2,False
+2015,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",31.4,False
+2015,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",29.4,False
+2015,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",30.4,False
+2015,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.0,False
+2015,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.0,False
+2015,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.1,False
+2015,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",13.0,False
+2015,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",13.5,False
+2015,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",13.3,False
+2016,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",13.5,False
+2016,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.6,False
+2016,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.3,False
+2016,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.3,False
+2016,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",11.6,False
+2016,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",15.2,False
+2016,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.7,False
+2016,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.9,False
+2016,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.9,False
+2016,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",4.2,False
+2016,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.4,False
+2016,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.5,False
+2017,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.3,False
+2017,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.1,False
+2017,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.1,False
+2017,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.4,False
+2017,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.7,False
+2017,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.5,False
+2017,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-0.3,False
+2017,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.9,False
+2017,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.6,False
+2017,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.9,False
+2017,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.8,False
+2017,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.1,False
+2018,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.0,False
+2018,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",4.9,False
+2018,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.8,False
+2018,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.7,False
+2018,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",11.3,False
+2018,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.6,False
+2018,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.0,False
+2018,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.1,False
+2018,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.1,False
+2018,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.3,False
+2018,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.7,False
+2018,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.1,False
+2019,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.9,False
+2019,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.8,False
+2019,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.9,False
+2019,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.8,False
+2019,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.4,False
+2019,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-3.4,False
+2019,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.7,False
+2019,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",0.3,False
+2019,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",1.4,False
+2019,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.7,False
+2019,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",4.6,False
+2019,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",0.9,False
+2020,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.5,False
+2020,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.2,False
+2020,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.7,False
+2020,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-7.7,False
+2020,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-9.7,False
+2020,6,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-7.6,False
+2020,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-1.9,False
+2020,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.7,False
+2020,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.1,False
+2020,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-5.6,False
+2020,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-6.6,False
+2020,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-10.3,False
+2021,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-7.0,False
+2021,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-9.8,False
+2021,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-9.0,False
+2021,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",26.7,False
+2021,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",22.0,False
+2021,7,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.7,False
+2021,8,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.8,False
+2021,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.3,False
+2021,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",14.5,False
+2021,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",19.1,False
+2021,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",23.9,False
+2022,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",23.8,False
+2022,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",21.3,False
+2022,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",15.7,False
+2022,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",12.9,False
+2022,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",7.8,False
+2022,9,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.1,False
+2022,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.0,False
+2022,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",4.8,False
+2022,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",0.5,False
+2023,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",1.5,False
+2023,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.5,False
+2023,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.4,False
+2023,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",4.6,False
+2023,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-2.7,False
+2023,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.9,False
+2023,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.6,False
+2023,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.4,False
+2024,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.1,False
+2024,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",9.1,False
+2024,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",10.4,False
+2024,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-2.4,False
+2024,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.6,False
+2024,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",3.3,False
+2024,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.5,False
+2024,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",2.3,False
+2025,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",0.9,False
+2025,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",1.8,False
+2025,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.8,False
+2025,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",1.2,False
+2025,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",4.0,False
+2025,10,food_bev_tobacco,"Makanan, Minuman, & Tembakau",6.4,False
+2025,11,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.5,False
+2025,12,food_bev_tobacco,"Makanan, Minuman, & Tembakau",5.9,False
+2026,1,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.1,False
+2026,2,food_bev_tobacco,"Makanan, Minuman, & Tembakau",8.8,False
+2026,3,food_bev_tobacco,"Makanan, Minuman, & Tembakau",4.7,False
+2026,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-3.8,False
+2026,4,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-8.6,False
+2026,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-4.0,True
+2026,5,food_bev_tobacco,"Makanan, Minuman, & Tembakau",-0.1,True
+2012,1,fuel,Bahan Bakar Kendaraan Bermotor,11.8,False
+2012,2,fuel,Bahan Bakar Kendaraan Bermotor,0.8,False
+2012,3,fuel,Bahan Bakar Kendaraan Bermotor,-5.6,False
+2012,4,fuel,Bahan Bakar Kendaraan Bermotor,-2.6,False
+2012,5,fuel,Bahan Bakar Kendaraan Bermotor,-9.4,False
+2012,6,fuel,Bahan Bakar Kendaraan Bermotor,-8.2,False
+2012,7,fuel,Bahan Bakar Kendaraan Bermotor,-5.5,False
+2012,8,fuel,Bahan Bakar Kendaraan Bermotor,1.5,False
+2012,9,fuel,Bahan Bakar Kendaraan Bermotor,-0.5,False
+2012,10,fuel,Bahan Bakar Kendaraan Bermotor,-9.0,False
+2012,11,fuel,Bahan Bakar Kendaraan Bermotor,-6.0,False
+2012,12,fuel,Bahan Bakar Kendaraan Bermotor,-5.3,False
+2013,1,fuel,Bahan Bakar Kendaraan Bermotor,1.8,False
+2013,2,fuel,Bahan Bakar Kendaraan Bermotor,5.7,False
+2013,3,fuel,Bahan Bakar Kendaraan Bermotor,6.7,False
+2013,4,fuel,Bahan Bakar Kendaraan Bermotor,6.1,False
+2013,5,fuel,Bahan Bakar Kendaraan Bermotor,12.0,False
+2013,6,fuel,Bahan Bakar Kendaraan Bermotor,18.8,False
+2013,7,fuel,Bahan Bakar Kendaraan Bermotor,21.7,False
+2013,8,fuel,Bahan Bakar Kendaraan Bermotor,13.5,False
+2013,9,fuel,Bahan Bakar Kendaraan Bermotor,17.1,False
+2013,10,fuel,Bahan Bakar Kendaraan Bermotor,12.3,False
+2013,11,fuel,Bahan Bakar Kendaraan Bermotor,13.8,False
+2014,1,fuel,Bahan Bakar Kendaraan Bermotor,13.7,False
+2014,2,fuel,Bahan Bakar Kendaraan Bermotor,17.6,False
+2014,3,fuel,Bahan Bakar Kendaraan Bermotor,16.1,False
+2014,4,fuel,Bahan Bakar Kendaraan Bermotor,14.5,False
+2014,5,fuel,Bahan Bakar Kendaraan Bermotor,19.2,False
+2014,6,fuel,Bahan Bakar Kendaraan Bermotor,6.6,False
+2014,7,fuel,Bahan Bakar Kendaraan Bermotor,2.5,False
+2014,8,fuel,Bahan Bakar Kendaraan Bermotor,4.3,False
+2014,9,fuel,Bahan Bakar Kendaraan Bermotor,5.6,False
+2014,10,fuel,Bahan Bakar Kendaraan Bermotor,12.1,False
+2014,11,fuel,Bahan Bakar Kendaraan Bermotor,14.7,False
+2014,12,fuel,Bahan Bakar Kendaraan Bermotor,-10.1,False
+2015,1,fuel,Bahan Bakar Kendaraan Bermotor,-14.2,False
+2015,2,fuel,Bahan Bakar Kendaraan Bermotor,-20.6,False
+2015,3,fuel,Bahan Bakar Kendaraan Bermotor,-19.1,False
+2015,4,fuel,Bahan Bakar Kendaraan Bermotor,-17.1,False
+2015,5,fuel,Bahan Bakar Kendaraan Bermotor,-19.7,False
+2015,6,fuel,Bahan Bakar Kendaraan Bermotor,-18.5,False
+2015,7,fuel,Bahan Bakar Kendaraan Bermotor,-24.7,False
+2015,8,fuel,Bahan Bakar Kendaraan Bermotor,-26.7,False
+2015,9,fuel,Bahan Bakar Kendaraan Bermotor,-28.9,False
+2015,10,fuel,Bahan Bakar Kendaraan Bermotor,-30.8,False
+2015,11,fuel,Bahan Bakar Kendaraan Bermotor,-32.7,False
+2015,12,fuel,Bahan Bakar Kendaraan Bermotor,-22.2,False
+2016,1,fuel,Bahan Bakar Kendaraan Bermotor,-16.9,False
+2016,2,fuel,Bahan Bakar Kendaraan Bermotor,-11.6,False
+2016,3,fuel,Bahan Bakar Kendaraan Bermotor,-14.4,False
+2016,4,fuel,Bahan Bakar Kendaraan Bermotor,-17.6,False
+2016,5,fuel,Bahan Bakar Kendaraan Bermotor,-21.4,False
+2016,6,fuel,Bahan Bakar Kendaraan Bermotor,-24.6,False
+2016,7,fuel,Bahan Bakar Kendaraan Bermotor,-17.8,False
+2016,8,fuel,Bahan Bakar Kendaraan Bermotor,-13.1,False
+2016,9,fuel,Bahan Bakar Kendaraan Bermotor,-12.5,False
+2016,10,fuel,Bahan Bakar Kendaraan Bermotor,-13.2,False
+2016,11,fuel,Bahan Bakar Kendaraan Bermotor,-13.2,False
+2016,12,fuel,Bahan Bakar Kendaraan Bermotor,-9.3,False
+2017,1,fuel,Bahan Bakar Kendaraan Bermotor,-9.9,False
+2017,2,fuel,Bahan Bakar Kendaraan Bermotor,-10.2,False
+2017,3,fuel,Bahan Bakar Kendaraan Bermotor,-10.7,False
+2017,4,fuel,Bahan Bakar Kendaraan Bermotor,-6.4,False
+2017,5,fuel,Bahan Bakar Kendaraan Bermotor,-0.8,False
+2017,6,fuel,Bahan Bakar Kendaraan Bermotor,1.0,False
+2017,7,fuel,Bahan Bakar Kendaraan Bermotor,-1.2,False
+2017,8,fuel,Bahan Bakar Kendaraan Bermotor,3.4,False
+2017,9,fuel,Bahan Bakar Kendaraan Bermotor,-0.1,False
+2017,10,fuel,Bahan Bakar Kendaraan Bermotor,4.3,False
+2017,11,fuel,Bahan Bakar Kendaraan Bermotor,5.8,False
+2017,12,fuel,Bahan Bakar Kendaraan Bermotor,4.3,False
+2018,1,fuel,Bahan Bakar Kendaraan Bermotor,4.0,False
+2018,2,fuel,Bahan Bakar Kendaraan Bermotor,-0.7,False
+2018,3,fuel,Bahan Bakar Kendaraan Bermotor,5.9,False
+2018,4,fuel,Bahan Bakar Kendaraan Bermotor,11.5,False
+2018,5,fuel,Bahan Bakar Kendaraan Bermotor,9.3,False
+2018,6,fuel,Bahan Bakar Kendaraan Bermotor,10.7,False
+2018,7,fuel,Bahan Bakar Kendaraan Bermotor,15.4,False
+2018,8,fuel,Bahan Bakar Kendaraan Bermotor,12.2,False
+2018,9,fuel,Bahan Bakar Kendaraan Bermotor,17.5,False
+2018,10,fuel,Bahan Bakar Kendaraan Bermotor,17.9,False
+2018,11,fuel,Bahan Bakar Kendaraan Bermotor,18.0,False
+2018,12,fuel,Bahan Bakar Kendaraan Bermotor,13.7,False
+2019,1,fuel,Bahan Bakar Kendaraan Bermotor,11.1,False
+2019,2,fuel,Bahan Bakar Kendaraan Bermotor,11.5,False
+2019,3,fuel,Bahan Bakar Kendaraan Bermotor,3.9,False
+2019,4,fuel,Bahan Bakar Kendaraan Bermotor,-0.1,False
+2019,5,fuel,Bahan Bakar Kendaraan Bermotor,0.8,False
+2019,6,fuel,Bahan Bakar Kendaraan Bermotor,-10.9,False
+2019,7,fuel,Bahan Bakar Kendaraan Bermotor,-7.7,False
+2019,8,fuel,Bahan Bakar Kendaraan Bermotor,-5.9,False
+2019,9,fuel,Bahan Bakar Kendaraan Bermotor,-10.2,False
+2019,10,fuel,Bahan Bakar Kendaraan Bermotor,-10.9,False
+2019,11,fuel,Bahan Bakar Kendaraan Bermotor,-11.5,False
+2019,12,fuel,Bahan Bakar Kendaraan Bermotor,-9.4,False
+2020,1,fuel,Bahan Bakar Kendaraan Bermotor,-7.3,False
+2020,2,fuel,Bahan Bakar Kendaraan Bermotor,-4.6,False
+2020,3,fuel,Bahan Bakar Kendaraan Bermotor,-18.7,False
+2020,4,fuel,Bahan Bakar Kendaraan Bermotor,-39.0,False
+2020,5,fuel,Bahan Bakar Kendaraan Bermotor,-45.4,False
+2020,6,fuel,Bahan Bakar Kendaraan Bermotor,-27.0,False
+2020,7,fuel,Bahan Bakar Kendaraan Bermotor,-26.1,False
+2020,8,fuel,Bahan Bakar Kendaraan Bermotor,-23.5,False
+2020,9,fuel,Bahan Bakar Kendaraan Bermotor,-18.7,False
+2020,10,fuel,Bahan Bakar Kendaraan Bermotor,-17.3,False
+2020,11,fuel,Bahan Bakar Kendaraan Bermotor,-14.3,False
+2020,12,fuel,Bahan Bakar Kendaraan Bermotor,-12.0,False
+2021,1,fuel,Bahan Bakar Kendaraan Bermotor,-17.1,False
+2021,2,fuel,Bahan Bakar Kendaraan Bermotor,-17.5,False
+2021,3,fuel,Bahan Bakar Kendaraan Bermotor,3.2,False
+2021,4,fuel,Bahan Bakar Kendaraan Bermotor,37.3,False
+2021,5,fuel,Bahan Bakar Kendaraan Bermotor,53.5,False
+2021,7,fuel,Bahan Bakar Kendaraan Bermotor,4.5,False
+2021,8,fuel,Bahan Bakar Kendaraan Bermotor,5.9,False
+2021,9,fuel,Bahan Bakar Kendaraan Bermotor,22.8,False
+2021,10,fuel,Bahan Bakar Kendaraan Bermotor,29.4,False
+2021,11,fuel,Bahan Bakar Kendaraan Bermotor,33.8,False
+2021,12,fuel,Bahan Bakar Kendaraan Bermotor,37.9,False
+2022,1,fuel,Bahan Bakar Kendaraan Bermotor,55.6,False
+2022,2,fuel,Bahan Bakar Kendaraan Bermotor,55.1,False
+2022,3,fuel,Bahan Bakar Kendaraan Bermotor,48.5,False
+2022,4,fuel,Bahan Bakar Kendaraan Bermotor,39.6,False
+2022,5,fuel,Bahan Bakar Kendaraan Bermotor,39.3,False
+2022,9,fuel,Bahan Bakar Kendaraan Bermotor,8.0,False
+2022,10,fuel,Bahan Bakar Kendaraan Bermotor,0.5,False
+2022,11,fuel,Bahan Bakar Kendaraan Bermotor,-5.7,False
+2022,12,fuel,Bahan Bakar Kendaraan Bermotor,-10.4,False
+2023,1,fuel,Bahan Bakar Kendaraan Bermotor,-11.3,False
+2023,2,fuel,Bahan Bakar Kendaraan Bermotor,-9.8,False
+2023,3,fuel,Bahan Bakar Kendaraan Bermotor,-12.5,False
+2023,4,fuel,Bahan Bakar Kendaraan Bermotor,-8.3,False
+2023,5,fuel,Bahan Bakar Kendaraan Bermotor,-8.4,False
+2023,10,fuel,Bahan Bakar Kendaraan Bermotor,9.4,False
+2023,11,fuel,Bahan Bakar Kendaraan Bermotor,10.9,False
+2023,12,fuel,Bahan Bakar Kendaraan Bermotor,17.2,False
+2024,1,fuel,Bahan Bakar Kendaraan Bermotor,14.6,False
+2024,2,fuel,Bahan Bakar Kendaraan Bermotor,10.7,False
+2024,3,fuel,Bahan Bakar Kendaraan Bermotor,7.1,False
+2024,4,fuel,Bahan Bakar Kendaraan Bermotor,3.3,False
+2024,5,fuel,Bahan Bakar Kendaraan Bermotor,6.5,False
+2024,10,fuel,Bahan Bakar Kendaraan Bermotor,9.3,False
+2024,11,fuel,Bahan Bakar Kendaraan Bermotor,8.8,False
+2024,12,fuel,Bahan Bakar Kendaraan Bermotor,3.9,False
+2025,1,fuel,Bahan Bakar Kendaraan Bermotor,-1.4,False
+2025,2,fuel,Bahan Bakar Kendaraan Bermotor,3.3,False
+2025,3,fuel,Bahan Bakar Kendaraan Bermotor,3.3,False
+2025,4,fuel,Bahan Bakar Kendaraan Bermotor,8.3,False
+2025,5,fuel,Bahan Bakar Kendaraan Bermotor,5.3,False
+2025,10,fuel,Bahan Bakar Kendaraan Bermotor,-1.0,False
+2025,11,fuel,Bahan Bakar Kendaraan Bermotor,0.8,False
+2025,12,fuel,Bahan Bakar Kendaraan Bermotor,-7.1,False
+2026,1,fuel,Bahan Bakar Kendaraan Bermotor,-5.3,False
+2026,2,fuel,Bahan Bakar Kendaraan Bermotor,-9.3,False
+2026,3,fuel,Bahan Bakar Kendaraan Bermotor,2.1,False
+2026,4,fuel,Bahan Bakar Kendaraan Bermotor,-0.9,False
+2026,4,fuel,Bahan Bakar Kendaraan Bermotor,-2.9,False
+2026,5,fuel,Bahan Bakar Kendaraan Bermotor,-2.2,True
+2026,5,fuel,Bahan Bakar Kendaraan Bermotor,-1.4,True
+2012,1,household_equip,Perlengkapan Rumah Tangga Lainnya,26.7,False
+2012,2,household_equip,Perlengkapan Rumah Tangga Lainnya,31.3,False
+2012,3,household_equip,Perlengkapan Rumah Tangga Lainnya,31.3,False
+2012,4,household_equip,Perlengkapan Rumah Tangga Lainnya,40.5,False
+2012,5,household_equip,Perlengkapan Rumah Tangga Lainnya,34.6,False
+2012,6,household_equip,Perlengkapan Rumah Tangga Lainnya,45.5,False
+2012,7,household_equip,Perlengkapan Rumah Tangga Lainnya,37.8,False
+2012,8,household_equip,Perlengkapan Rumah Tangga Lainnya,35.8,False
+2012,9,household_equip,Perlengkapan Rumah Tangga Lainnya,36.4,False
+2012,10,household_equip,Perlengkapan Rumah Tangga Lainnya,32.7,False
+2012,11,household_equip,Perlengkapan Rumah Tangga Lainnya,30.4,False
+2012,12,household_equip,Perlengkapan Rumah Tangga Lainnya,24.3,False
+2013,1,household_equip,Perlengkapan Rumah Tangga Lainnya,8.2,False
+2013,2,household_equip,Perlengkapan Rumah Tangga Lainnya,8.0,False
+2013,3,household_equip,Perlengkapan Rumah Tangga Lainnya,9.9,False
+2013,4,household_equip,Perlengkapan Rumah Tangga Lainnya,10.2,False
+2013,5,household_equip,Perlengkapan Rumah Tangga Lainnya,7.9,False
+2013,6,household_equip,Perlengkapan Rumah Tangga Lainnya,-3.1,False
+2013,7,household_equip,Perlengkapan Rumah Tangga Lainnya,10.4,False
+2013,8,household_equip,Perlengkapan Rumah Tangga Lainnya,1.1,False
+2013,9,household_equip,Perlengkapan Rumah Tangga Lainnya,-0.6,False
+2013,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-2.3,False
+2013,11,household_equip,Perlengkapan Rumah Tangga Lainnya,18.0,False
+2014,1,household_equip,Perlengkapan Rumah Tangga Lainnya,28.6,False
+2014,2,household_equip,Perlengkapan Rumah Tangga Lainnya,10.5,False
+2014,3,household_equip,Perlengkapan Rumah Tangga Lainnya,-10.9,False
+2014,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-10.9,False
+2014,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-9.6,False
+2014,6,household_equip,Perlengkapan Rumah Tangga Lainnya,-9.5,False
+2014,7,household_equip,Perlengkapan Rumah Tangga Lainnya,2.1,False
+2014,8,household_equip,Perlengkapan Rumah Tangga Lainnya,-8.0,False
+2014,9,household_equip,Perlengkapan Rumah Tangga Lainnya,2.6,False
+2014,10,household_equip,Perlengkapan Rumah Tangga Lainnya,1.3,False
+2014,11,household_equip,Perlengkapan Rumah Tangga Lainnya,-18.5,False
+2014,12,household_equip,Perlengkapan Rumah Tangga Lainnya,-21.2,False
+2015,1,household_equip,Perlengkapan Rumah Tangga Lainnya,-13.2,False
+2015,2,household_equip,Perlengkapan Rumah Tangga Lainnya,-2.6,False
+2015,3,household_equip,Perlengkapan Rumah Tangga Lainnya,17.0,False
+2015,4,household_equip,Perlengkapan Rumah Tangga Lainnya,12.3,False
+2015,5,household_equip,Perlengkapan Rumah Tangga Lainnya,10.6,False
+2015,6,household_equip,Perlengkapan Rumah Tangga Lainnya,13.2,False
+2015,7,household_equip,Perlengkapan Rumah Tangga Lainnya,-1.7,False
+2015,8,household_equip,Perlengkapan Rumah Tangga Lainnya,-0.3,False
+2015,9,household_equip,Perlengkapan Rumah Tangga Lainnya,0.9,False
+2015,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-0.8,False
+2015,11,household_equip,Perlengkapan Rumah Tangga Lainnya,6.4,False
+2015,12,household_equip,Perlengkapan Rumah Tangga Lainnya,15.1,False
+2016,1,household_equip,Perlengkapan Rumah Tangga Lainnya,6.4,False
+2016,2,household_equip,Perlengkapan Rumah Tangga Lainnya,5.7,False
+2016,3,household_equip,Perlengkapan Rumah Tangga Lainnya,7.0,False
+2016,4,household_equip,Perlengkapan Rumah Tangga Lainnya,14.8,False
+2016,5,household_equip,Perlengkapan Rumah Tangga Lainnya,16.6,False
+2016,6,household_equip,Perlengkapan Rumah Tangga Lainnya,16.3,False
+2016,7,household_equip,Perlengkapan Rumah Tangga Lainnya,10.7,False
+2016,8,household_equip,Perlengkapan Rumah Tangga Lainnya,8.2,False
+2016,9,household_equip,Perlengkapan Rumah Tangga Lainnya,10.4,False
+2016,10,household_equip,Perlengkapan Rumah Tangga Lainnya,13.6,False
+2016,11,household_equip,Perlengkapan Rumah Tangga Lainnya,10.2,False
+2016,12,household_equip,Perlengkapan Rumah Tangga Lainnya,0.8,False
+2017,1,household_equip,Perlengkapan Rumah Tangga Lainnya,2.2,False
+2017,2,household_equip,Perlengkapan Rumah Tangga Lainnya,1.4,False
+2017,3,household_equip,Perlengkapan Rumah Tangga Lainnya,1.2,False
+2017,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-4.6,False
+2017,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-7.5,False
+2017,6,household_equip,Perlengkapan Rumah Tangga Lainnya,-4.9,False
+2017,7,household_equip,Perlengkapan Rumah Tangga Lainnya,-17.2,False
+2017,8,household_equip,Perlengkapan Rumah Tangga Lainnya,-9.7,False
+2017,9,household_equip,Perlengkapan Rumah Tangga Lainnya,-9.7,False
+2017,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-9.5,False
+2017,11,household_equip,Perlengkapan Rumah Tangga Lainnya,-10.5,False
+2017,12,household_equip,Perlengkapan Rumah Tangga Lainnya,-13.5,False
+2018,1,household_equip,Perlengkapan Rumah Tangga Lainnya,-10.0,False
+2018,2,household_equip,Perlengkapan Rumah Tangga Lainnya,-4.1,False
+2018,3,household_equip,Perlengkapan Rumah Tangga Lainnya,0.1,False
+2018,4,household_equip,Perlengkapan Rumah Tangga Lainnya,2.4,False
+2018,5,household_equip,Perlengkapan Rumah Tangga Lainnya,6.7,False
+2018,6,household_equip,Perlengkapan Rumah Tangga Lainnya,-0.5,False
+2018,7,household_equip,Perlengkapan Rumah Tangga Lainnya,5.3,False
+2018,8,household_equip,Perlengkapan Rumah Tangga Lainnya,11.8,False
+2018,9,household_equip,Perlengkapan Rumah Tangga Lainnya,8.1,False
+2018,10,household_equip,Perlengkapan Rumah Tangga Lainnya,7.7,False
+2018,11,household_equip,Perlengkapan Rumah Tangga Lainnya,6.2,False
+2018,12,household_equip,Perlengkapan Rumah Tangga Lainnya,8.4,False
+2019,1,household_equip,Perlengkapan Rumah Tangga Lainnya,8.2,False
+2019,2,household_equip,Perlengkapan Rumah Tangga Lainnya,6.2,False
+2019,3,household_equip,Perlengkapan Rumah Tangga Lainnya,8.2,False
+2019,4,household_equip,Perlengkapan Rumah Tangga Lainnya,10.5,False
+2019,5,household_equip,Perlengkapan Rumah Tangga Lainnya,7.0,False
+2019,6,household_equip,Perlengkapan Rumah Tangga Lainnya,5.4,False
+2019,7,household_equip,Perlengkapan Rumah Tangga Lainnya,4.0,False
+2019,8,household_equip,Perlengkapan Rumah Tangga Lainnya,8.3,False
+2019,9,household_equip,Perlengkapan Rumah Tangga Lainnya,11.1,False
+2019,10,household_equip,Perlengkapan Rumah Tangga Lainnya,4.0,False
+2019,11,household_equip,Perlengkapan Rumah Tangga Lainnya,5.5,False
+2019,12,household_equip,Perlengkapan Rumah Tangga Lainnya,4.9,False
+2020,1,household_equip,Perlengkapan Rumah Tangga Lainnya,2.0,False
+2020,2,household_equip,Perlengkapan Rumah Tangga Lainnya,3.7,False
+2020,3,household_equip,Perlengkapan Rumah Tangga Lainnya,-5.5,False
+2020,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-20.8,False
+2020,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-21.9,False
+2020,6,household_equip,Perlengkapan Rumah Tangga Lainnya,-23.1,False
+2020,7,household_equip,Perlengkapan Rumah Tangga Lainnya,-21.3,False
+2020,8,household_equip,Perlengkapan Rumah Tangga Lainnya,-24.5,False
+2020,9,household_equip,Perlengkapan Rumah Tangga Lainnya,-26.2,False
+2020,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-23.3,False
+2020,11,household_equip,Perlengkapan Rumah Tangga Lainnya,-26.3,False
+2020,12,household_equip,Perlengkapan Rumah Tangga Lainnya,-25.0,False
+2021,1,household_equip,Perlengkapan Rumah Tangga Lainnya,-25.8,False
+2021,2,household_equip,Perlengkapan Rumah Tangga Lainnya,-27.4,False
+2021,3,household_equip,Perlengkapan Rumah Tangga Lainnya,-23.3,False
+2021,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-10.8,False
+2021,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-7.4,False
+2021,7,household_equip,Perlengkapan Rumah Tangga Lainnya,-22.3,False
+2021,8,household_equip,Perlengkapan Rumah Tangga Lainnya,-20.3,False
+2021,9,household_equip,Perlengkapan Rumah Tangga Lainnya,-24.9,False
+2021,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-20.3,False
+2021,11,household_equip,Perlengkapan Rumah Tangga Lainnya,-16.4,False
+2021,12,household_equip,Perlengkapan Rumah Tangga Lainnya,-24.0,False
+2022,1,household_equip,Perlengkapan Rumah Tangga Lainnya,-20.4,False
+2022,2,household_equip,Perlengkapan Rumah Tangga Lainnya,-22.8,False
+2022,3,household_equip,Perlengkapan Rumah Tangga Lainnya,-18.8,False
+2022,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-21.0,False
+2022,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-24.7,False
+2022,9,household_equip,Perlengkapan Rumah Tangga Lainnya,-6.8,False
+2022,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-14.8,False
+2022,11,household_equip,Perlengkapan Rumah Tangga Lainnya,-14.2,False
+2022,12,household_equip,Perlengkapan Rumah Tangga Lainnya,-10.2,False
+2023,1,household_equip,Perlengkapan Rumah Tangga Lainnya,-11.5,False
+2023,2,household_equip,Perlengkapan Rumah Tangga Lainnya,-6.8,False
+2023,3,household_equip,Perlengkapan Rumah Tangga Lainnya,-9.0,False
+2023,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-2.9,False
+2023,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-8.4,False
+2023,10,household_equip,Perlengkapan Rumah Tangga Lainnya,3.6,False
+2023,11,household_equip,Perlengkapan Rumah Tangga Lainnya,2.4,False
+2023,12,household_equip,Perlengkapan Rumah Tangga Lainnya,3.4,False
+2024,1,household_equip,Perlengkapan Rumah Tangga Lainnya,5.8,False
+2024,2,household_equip,Perlengkapan Rumah Tangga Lainnya,0.5,False
+2024,3,household_equip,Perlengkapan Rumah Tangga Lainnya,2.9,False
+2024,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-6.0,False
+2024,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-3.4,False
+2024,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-6.5,False
+2024,11,household_equip,Perlengkapan Rumah Tangga Lainnya,-7.2,False
+2024,12,household_equip,Perlengkapan Rumah Tangga Lainnya,-6.8,False
+2025,1,household_equip,Perlengkapan Rumah Tangga Lainnya,-9.1,False
+2025,2,household_equip,Perlengkapan Rumah Tangga Lainnya,-4.2,False
+2025,3,household_equip,Perlengkapan Rumah Tangga Lainnya,-5.7,False
+2025,4,household_equip,Perlengkapan Rumah Tangga Lainnya,-10.5,False
+2025,5,household_equip,Perlengkapan Rumah Tangga Lainnya,-5.8,False
+2025,10,household_equip,Perlengkapan Rumah Tangga Lainnya,-2.3,False
+2025,11,household_equip,Perlengkapan Rumah Tangga Lainnya,-1.6,False
+2025,12,household_equip,Perlengkapan Rumah Tangga Lainnya,-2.8,False
+2026,1,household_equip,Perlengkapan Rumah Tangga Lainnya,0.4,False
+2026,2,household_equip,Perlengkapan Rumah Tangga Lainnya,0.5,False
+2026,3,household_equip,Perlengkapan Rumah Tangga Lainnya,-3.5,False
+2026,4,household_equip,Perlengkapan Rumah Tangga Lainnya,0.6,False
+2026,4,household_equip,Perlengkapan Rumah Tangga Lainnya,4.1,False
+2026,5,household_equip,Perlengkapan Rumah Tangga Lainnya,1.8,True
+2026,5,household_equip,Perlengkapan Rumah Tangga Lainnya,1.2,True
+2012,1,ict_equipment,Peralatan Informasi dan Komunikasi,10.8,False
+2012,2,ict_equipment,Peralatan Informasi dan Komunikasi,3.6,False
+2012,3,ict_equipment,Peralatan Informasi dan Komunikasi,5.0,False
+2012,4,ict_equipment,Peralatan Informasi dan Komunikasi,11.7,False
+2012,5,ict_equipment,Peralatan Informasi dan Komunikasi,4.1,False
+2012,6,ict_equipment,Peralatan Informasi dan Komunikasi,6.3,False
+2012,7,ict_equipment,Peralatan Informasi dan Komunikasi,12.2,False
+2012,8,ict_equipment,Peralatan Informasi dan Komunikasi,22.7,False
+2012,9,ict_equipment,Peralatan Informasi dan Komunikasi,13.0,False
+2012,10,ict_equipment,Peralatan Informasi dan Komunikasi,35.5,False
+2012,11,ict_equipment,Peralatan Informasi dan Komunikasi,24.4,False
+2012,12,ict_equipment,Peralatan Informasi dan Komunikasi,19.0,False
+2013,1,ict_equipment,Peralatan Informasi dan Komunikasi,12.9,False
+2013,2,ict_equipment,Peralatan Informasi dan Komunikasi,35.7,False
+2013,3,ict_equipment,Peralatan Informasi dan Komunikasi,41.4,False
+2013,4,ict_equipment,Peralatan Informasi dan Komunikasi,48.2,False
+2013,5,ict_equipment,Peralatan Informasi dan Komunikasi,57.3,False
+2013,6,ict_equipment,Peralatan Informasi dan Komunikasi,53.8,False
+2013,7,ict_equipment,Peralatan Informasi dan Komunikasi,58.9,False
+2013,8,ict_equipment,Peralatan Informasi dan Komunikasi,36.2,False
+2013,9,ict_equipment,Peralatan Informasi dan Komunikasi,59.8,False
+2013,10,ict_equipment,Peralatan Informasi dan Komunikasi,45.0,False
+2013,11,ict_equipment,Peralatan Informasi dan Komunikasi,59.3,False
+2014,1,ict_equipment,Peralatan Informasi dan Komunikasi,56.0,False
+2014,2,ict_equipment,Peralatan Informasi dan Komunikasi,32.0,False
+2014,3,ict_equipment,Peralatan Informasi dan Komunikasi,36.1,False
+2014,4,ict_equipment,Peralatan Informasi dan Komunikasi,28.3,False
+2014,5,ict_equipment,Peralatan Informasi dan Komunikasi,30.5,False
+2014,6,ict_equipment,Peralatan Informasi dan Komunikasi,33.5,False
+2014,7,ict_equipment,Peralatan Informasi dan Komunikasi,27.0,False
+2014,8,ict_equipment,Peralatan Informasi dan Komunikasi,39.1,False
+2014,9,ict_equipment,Peralatan Informasi dan Komunikasi,37.6,False
+2014,10,ict_equipment,Peralatan Informasi dan Komunikasi,38.9,False
+2014,11,ict_equipment,Peralatan Informasi dan Komunikasi,27.0,False
+2014,12,ict_equipment,Peralatan Informasi dan Komunikasi,29.8,False
+2015,1,ict_equipment,Peralatan Informasi dan Komunikasi,30.3,False
+2015,2,ict_equipment,Peralatan Informasi dan Komunikasi,28.8,False
+2015,3,ict_equipment,Peralatan Informasi dan Komunikasi,31.9,False
+2015,4,ict_equipment,Peralatan Informasi dan Komunikasi,36.1,False
+2015,5,ict_equipment,Peralatan Informasi dan Komunikasi,29.6,False
+2015,6,ict_equipment,Peralatan Informasi dan Komunikasi,31.7,False
+2015,7,ict_equipment,Peralatan Informasi dan Komunikasi,29.1,False
+2015,8,ict_equipment,Peralatan Informasi dan Komunikasi,18.1,False
+2015,9,ict_equipment,Peralatan Informasi dan Komunikasi,24.2,False
+2015,10,ict_equipment,Peralatan Informasi dan Komunikasi,23.8,False
+2015,11,ict_equipment,Peralatan Informasi dan Komunikasi,23.7,False
+2015,12,ict_equipment,Peralatan Informasi dan Komunikasi,19.8,False
+2016,1,ict_equipment,Peralatan Informasi dan Komunikasi,34.9,False
+2016,2,ict_equipment,Peralatan Informasi dan Komunikasi,32.1,False
+2016,3,ict_equipment,Peralatan Informasi dan Komunikasi,33.7,False
+2016,4,ict_equipment,Peralatan Informasi dan Komunikasi,33.6,False
+2016,5,ict_equipment,Peralatan Informasi dan Komunikasi,37.4,False
+2016,6,ict_equipment,Peralatan Informasi dan Komunikasi,30.8,False
+2016,7,ict_equipment,Peralatan Informasi dan Komunikasi,26.3,False
+2016,8,ict_equipment,Peralatan Informasi dan Komunikasi,23.6,False
+2016,9,ict_equipment,Peralatan Informasi dan Komunikasi,18.7,False
+2016,10,ict_equipment,Peralatan Informasi dan Komunikasi,22.7,False
+2016,11,ict_equipment,Peralatan Informasi dan Komunikasi,19.2,False
+2016,12,ict_equipment,Peralatan Informasi dan Komunikasi,21.4,False
+2017,1,ict_equipment,Peralatan Informasi dan Komunikasi,12.5,False
+2017,2,ict_equipment,Peralatan Informasi dan Komunikasi,6.1,False
+2017,3,ict_equipment,Peralatan Informasi dan Komunikasi,2.3,False
+2017,4,ict_equipment,Peralatan Informasi dan Komunikasi,0.2,False
+2017,5,ict_equipment,Peralatan Informasi dan Komunikasi,-3.8,False
+2017,6,ict_equipment,Peralatan Informasi dan Komunikasi,-0.4,False
+2017,7,ict_equipment,Peralatan Informasi dan Komunikasi,-2.5,False
+2017,8,ict_equipment,Peralatan Informasi dan Komunikasi,-7.7,False
+2017,9,ict_equipment,Peralatan Informasi dan Komunikasi,-6.5,False
+2017,10,ict_equipment,Peralatan Informasi dan Komunikasi,-11.9,False
+2017,11,ict_equipment,Peralatan Informasi dan Komunikasi,-4.8,False
+2017,12,ict_equipment,Peralatan Informasi dan Komunikasi,-11.4,False
+2018,1,ict_equipment,Peralatan Informasi dan Komunikasi,-12.7,False
+2018,2,ict_equipment,Peralatan Informasi dan Komunikasi,-11.7,False
+2018,3,ict_equipment,Peralatan Informasi dan Komunikasi,-16.3,False
+2018,4,ict_equipment,Peralatan Informasi dan Komunikasi,-12.7,False
+2018,5,ict_equipment,Peralatan Informasi dan Komunikasi,-9.5,False
+2018,6,ict_equipment,Peralatan Informasi dan Komunikasi,-14.4,False
+2018,7,ict_equipment,Peralatan Informasi dan Komunikasi,-13.9,False
+2018,8,ict_equipment,Peralatan Informasi dan Komunikasi,-13.2,False
+2018,9,ict_equipment,Peralatan Informasi dan Komunikasi,-13.7,False
+2018,10,ict_equipment,Peralatan Informasi dan Komunikasi,-15.7,False
+2018,11,ict_equipment,Peralatan Informasi dan Komunikasi,-15.0,False
+2018,12,ict_equipment,Peralatan Informasi dan Komunikasi,-10.3,False
+2019,1,ict_equipment,Peralatan Informasi dan Komunikasi,-14.2,False
+2019,2,ict_equipment,Peralatan Informasi dan Komunikasi,-8.7,False
+2019,3,ict_equipment,Peralatan Informasi dan Komunikasi,-6.3,False
+2019,4,ict_equipment,Peralatan Informasi dan Komunikasi,-7.9,False
+2019,5,ict_equipment,Peralatan Informasi dan Komunikasi,-9.6,False
+2019,6,ict_equipment,Peralatan Informasi dan Komunikasi,-8.2,False
+2019,7,ict_equipment,Peralatan Informasi dan Komunikasi,-5.2,False
+2019,8,ict_equipment,Peralatan Informasi dan Komunikasi,-2.6,False
+2019,9,ict_equipment,Peralatan Informasi dan Komunikasi,-4.1,False
+2019,10,ict_equipment,Peralatan Informasi dan Komunikasi,-1.6,False
+2019,11,ict_equipment,Peralatan Informasi dan Komunikasi,-5.2,False
+2019,12,ict_equipment,Peralatan Informasi dan Komunikasi,-7.0,False
+2020,1,ict_equipment,Peralatan Informasi dan Komunikasi,-3.1,False
+2020,2,ict_equipment,Peralatan Informasi dan Komunikasi,-4.0,False
+2020,3,ict_equipment,Peralatan Informasi dan Komunikasi,-7.6,False
+2020,4,ict_equipment,Peralatan Informasi dan Komunikasi,-17.5,False
+2020,5,ict_equipment,Peralatan Informasi dan Komunikasi,-19.7,False
+2020,6,ict_equipment,Peralatan Informasi dan Komunikasi,-16.3,False
+2020,7,ict_equipment,Peralatan Informasi dan Komunikasi,-17.3,False
+2020,8,ict_equipment,Peralatan Informasi dan Komunikasi,-19.2,False
+2020,9,ict_equipment,Peralatan Informasi dan Komunikasi,-22.2,False
+2020,10,ict_equipment,Peralatan Informasi dan Komunikasi,-30.9,False
+2020,11,ict_equipment,Peralatan Informasi dan Komunikasi,-36.3,False
+2020,12,ict_equipment,Peralatan Informasi dan Komunikasi,-39.2,False
+2021,1,ict_equipment,Peralatan Informasi dan Komunikasi,-38.8,False
+2021,2,ict_equipment,Peralatan Informasi dan Komunikasi,-39.7,False
+2021,3,ict_equipment,Peralatan Informasi dan Komunikasi,-38.8,False
+2021,4,ict_equipment,Peralatan Informasi dan Komunikasi,-31.1,False
+2021,5,ict_equipment,Peralatan Informasi dan Komunikasi,-28.6,False
+2021,7,ict_equipment,Peralatan Informasi dan Komunikasi,-36.5,False
+2021,8,ict_equipment,Peralatan Informasi dan Komunikasi,-32.4,False
+2021,9,ict_equipment,Peralatan Informasi dan Komunikasi,-28.8,False
+2021,10,ict_equipment,Peralatan Informasi dan Komunikasi,-18.9,False
+2021,11,ict_equipment,Peralatan Informasi dan Komunikasi,-15.7,False
+2021,12,ict_equipment,Peralatan Informasi dan Komunikasi,-16.2,False
+2022,1,ict_equipment,Peralatan Informasi dan Komunikasi,-14.7,False
+2022,2,ict_equipment,Peralatan Informasi dan Komunikasi,-15.5,False
+2022,3,ict_equipment,Peralatan Informasi dan Komunikasi,-18.0,False
+2022,4,ict_equipment,Peralatan Informasi dan Komunikasi,-8.8,False
+2022,5,ict_equipment,Peralatan Informasi dan Komunikasi,-12.8,False
+2022,9,ict_equipment,Peralatan Informasi dan Komunikasi,-22.1,False
+2022,10,ict_equipment,Peralatan Informasi dan Komunikasi,-20.7,False
+2022,11,ict_equipment,Peralatan Informasi dan Komunikasi,-16.3,False
+2022,12,ict_equipment,Peralatan Informasi dan Komunikasi,16.6,False
+2023,1,ict_equipment,Peralatan Informasi dan Komunikasi,-4.1,False
+2023,2,ict_equipment,Peralatan Informasi dan Komunikasi,-18.9,False
+2023,3,ict_equipment,Peralatan Informasi dan Komunikasi,-18.4,False
+2023,4,ict_equipment,Peralatan Informasi dan Komunikasi,-23.5,False
+2023,5,ict_equipment,Peralatan Informasi dan Komunikasi,-25.3,False
+2023,10,ict_equipment,Peralatan Informasi dan Komunikasi,-9.9,False
+2023,11,ict_equipment,Peralatan Informasi dan Komunikasi,-11.3,False
+2023,12,ict_equipment,Peralatan Informasi dan Komunikasi,-39.0,False
+2024,1,ict_equipment,Peralatan Informasi dan Komunikasi,-33.3,False
+2024,2,ict_equipment,Peralatan Informasi dan Komunikasi,-21.9,False
+2024,3,ict_equipment,Peralatan Informasi dan Komunikasi,-5.9,False
+2024,4,ict_equipment,Peralatan Informasi dan Komunikasi,-6.0,False
+2024,5,ict_equipment,Peralatan Informasi dan Komunikasi,-6.4,False
+2024,10,ict_equipment,Peralatan Informasi dan Komunikasi,-25.1,False
+2024,11,ict_equipment,Peralatan Informasi dan Komunikasi,-23.1,False
+2024,12,ict_equipment,Peralatan Informasi dan Komunikasi,-5.9,False
+2025,1,ict_equipment,Peralatan Informasi dan Komunikasi,-3.4,False
+2025,2,ict_equipment,Peralatan Informasi dan Komunikasi,-2.3,False
+2025,3,ict_equipment,Peralatan Informasi dan Komunikasi,-12.9,False
+2025,4,ict_equipment,Peralatan Informasi dan Komunikasi,-25.1,False
+2025,5,ict_equipment,Peralatan Informasi dan Komunikasi,-27.4,False
+2025,10,ict_equipment,Peralatan Informasi dan Komunikasi,-28.3,False
+2025,11,ict_equipment,Peralatan Informasi dan Komunikasi,-27.4,False
+2025,12,ict_equipment,Peralatan Informasi dan Komunikasi,-30.0,False
+2026,1,ict_equipment,Peralatan Informasi dan Komunikasi,-27.1,False
+2026,2,ict_equipment,Peralatan Informasi dan Komunikasi,-28.3,False
+2026,3,ict_equipment,Peralatan Informasi dan Komunikasi,-26.4,False
+2026,4,ict_equipment,Peralatan Informasi dan Komunikasi,-26.4,False
+2026,4,ict_equipment,Peralatan Informasi dan Komunikasi,0.0,False
+2026,5,ict_equipment,Peralatan Informasi dan Komunikasi,-17.5,True
+2026,5,ict_equipment,Peralatan Informasi dan Komunikasi,8.9,True
+2012,1,other_goods,Barang Lainnya,18.4,False
+2012,2,other_goods,Barang Lainnya,17.5,False
+2012,3,other_goods,Barang Lainnya,18.9,False
+2012,4,other_goods,Barang Lainnya,17.5,False
+2012,5,other_goods,Barang Lainnya,24.8,False
+2012,6,other_goods,Barang Lainnya,24.8,False
+2012,7,other_goods,Barang Lainnya,31.1,False
+2012,8,other_goods,Barang Lainnya,14.1,False
+2012,9,other_goods,Barang Lainnya,30.5,False
+2012,10,other_goods,Barang Lainnya,31.4,False
+2012,11,other_goods,Barang Lainnya,28.7,False
+2012,12,other_goods,Barang Lainnya,20.2,False
+2013,1,other_goods,Barang Lainnya,6.1,False
+2013,2,other_goods,Barang Lainnya,14.6,False
+2013,3,other_goods,Barang Lainnya,14.3,False
+2013,4,other_goods,Barang Lainnya,21.0,False
+2013,5,other_goods,Barang Lainnya,20.1,False
+2013,6,other_goods,Barang Lainnya,27.0,False
+2013,7,other_goods,Barang Lainnya,47.9,False
+2013,8,other_goods,Barang Lainnya,7.3,False
+2013,9,other_goods,Barang Lainnya,18.3,False
+2013,10,other_goods,Barang Lainnya,26.2,False
+2013,11,other_goods,Barang Lainnya,31.9,False
+2014,1,other_goods,Barang Lainnya,41.0,False
+2014,2,other_goods,Barang Lainnya,41.5,False
+2014,3,other_goods,Barang Lainnya,30.9,False
+2014,4,other_goods,Barang Lainnya,23.6,False
+2014,5,other_goods,Barang Lainnya,20.3,False
+2014,6,other_goods,Barang Lainnya,16.1,False
+2014,7,other_goods,Barang Lainnya,8.9,False
+2014,8,other_goods,Barang Lainnya,-17.1,False
+2014,9,other_goods,Barang Lainnya,14.6,False
+2014,10,other_goods,Barang Lainnya,12.0,False
+2014,11,other_goods,Barang Lainnya,6.5,False
+2014,12,other_goods,Barang Lainnya,1.7,False
+2015,1,other_goods,Barang Lainnya,-2.5,False
+2015,2,other_goods,Barang Lainnya,-5.2,False
+2015,3,other_goods,Barang Lainnya,-0.2,False
+2015,4,other_goods,Barang Lainnya,4.4,False
+2015,5,other_goods,Barang Lainnya,0.2,False
+2015,6,other_goods,Barang Lainnya,0.4,False
+2015,7,other_goods,Barang Lainnya,2.6,False
+2015,8,other_goods,Barang Lainnya,-4.1,False
+2015,9,other_goods,Barang Lainnya,-4.4,False
+2015,10,other_goods,Barang Lainnya,-7.3,False
+2015,11,other_goods,Barang Lainnya,-9.3,False
+2015,12,other_goods,Barang Lainnya,-5.2,False
+2016,1,other_goods,Barang Lainnya,-6.6,False
+2016,2,other_goods,Barang Lainnya,-14.0,False
+2016,3,other_goods,Barang Lainnya,-12.4,False
+2016,4,other_goods,Barang Lainnya,-15.3,False
+2016,5,other_goods,Barang Lainnya,-11.1,False
+2016,6,other_goods,Barang Lainnya,6.2,False
+2016,7,other_goods,Barang Lainnya,-24.5,False
+2016,8,other_goods,Barang Lainnya,-6.9,False
+2016,9,other_goods,Barang Lainnya,-3.7,False
+2016,10,other_goods,Barang Lainnya,-4.2,False
+2016,11,other_goods,Barang Lainnya,-3.6,False
+2016,12,other_goods,Barang Lainnya,-6.4,False
+2017,1,other_goods,Barang Lainnya,-14.4,False
+2017,2,other_goods,Barang Lainnya,-12.4,False
+2017,3,other_goods,Barang Lainnya,-9.2,False
+2017,4,other_goods,Barang Lainnya,-8.8,False
+2017,5,other_goods,Barang Lainnya,-4.0,False
+2017,6,other_goods,Barang Lainnya,5.3,False
+2017,7,other_goods,Barang Lainnya,-16.0,False
+2017,8,other_goods,Barang Lainnya,-2.8,False
+2017,9,other_goods,Barang Lainnya,-7.3,False
+2017,10,other_goods,Barang Lainnya,-4.8,False
+2017,11,other_goods,Barang Lainnya,-4.2,False
+2017,12,other_goods,Barang Lainnya,-6.2,False
+2018,1,other_goods,Barang Lainnya,5.0,False
+2018,2,other_goods,Barang Lainnya,16.2,False
+2018,3,other_goods,Barang Lainnya,20.0,False
+2018,4,other_goods,Barang Lainnya,21.4,False
+2018,5,other_goods,Barang Lainnya,34.9,False
+2018,6,other_goods,Barang Lainnya,8.1,False
+2018,7,other_goods,Barang Lainnya,25.9,False
+2018,8,other_goods,Barang Lainnya,36.5,False
+2018,9,other_goods,Barang Lainnya,43.0,False
+2018,10,other_goods,Barang Lainnya,44.3,False
+2018,11,other_goods,Barang Lainnya,51.2,False
+2018,12,other_goods,Barang Lainnya,48.3,False
+2019,1,other_goods,Barang Lainnya,51.1,False
+2019,2,other_goods,Barang Lainnya,41.6,False
+2019,3,other_goods,Barang Lainnya,42.0,False
+2019,4,other_goods,Barang Lainnya,38.4,False
+2019,5,other_goods,Barang Lainnya,50.7,False
+2019,6,other_goods,Barang Lainnya,8.6,False
+2019,7,other_goods,Barang Lainnya,6.1,False
+2019,8,other_goods,Barang Lainnya,-3.1,False
+2019,9,other_goods,Barang Lainnya,-13.3,False
+2019,10,other_goods,Barang Lainnya,-13.6,False
+2019,11,other_goods,Barang Lainnya,-19.9,False
+2019,12,other_goods,Barang Lainnya,-10.3,False
+2020,1,other_goods,Barang Lainnya,-28.4,False
+2020,2,other_goods,Barang Lainnya,-32.4,False
+2020,3,other_goods,Barang Lainnya,-52.2,False
+2020,4,other_goods,Barang Lainnya,-68.5,False
+2020,5,other_goods,Barang Lainnya,-72.9,False
+2020,6,other_goods,Barang Lainnya,-69.1,False
+2020,7,other_goods,Barang Lainnya,-60.3,False
+2020,8,other_goods,Barang Lainnya,-56.7,False
+2020,9,other_goods,Barang Lainnya,-51.8,False
+2020,10,other_goods,Barang Lainnya,-53.5,False
+2020,11,other_goods,Barang Lainnya,-51.3,False
+2020,12,other_goods,Barang Lainnya,-55.0,False
+2021,1,other_goods,Barang Lainnya,-44.5,False
+2021,2,other_goods,Barang Lainnya,-44.1,False
+2021,3,other_goods,Barang Lainnya,-17.1,False
+2021,4,other_goods,Barang Lainnya,48.2,False
+2021,5,other_goods,Barang Lainnya,43.1,False
+2021,7,other_goods,Barang Lainnya,-16.8,False
+2021,8,other_goods,Barang Lainnya,-16.6,False
+2021,9,other_goods,Barang Lainnya,-15.7,False
+2021,10,other_goods,Barang Lainnya,-7.8,False
+2021,11,other_goods,Barang Lainnya,-8.3,False
+2021,12,other_goods,Barang Lainnya,-5.1,False
+2022,1,other_goods,Barang Lainnya,-1.5,False
+2022,2,other_goods,Barang Lainnya,5.4,False
+2022,3,other_goods,Barang Lainnya,-6.2,False
+2022,4,other_goods,Barang Lainnya,2.8,False
+2022,5,other_goods,Barang Lainnya,-24.7,False
+2022,9,other_goods,Barang Lainnya,18.0,False
+2022,10,other_goods,Barang Lainnya,14.0,False
+2022,11,other_goods,Barang Lainnya,8.1,False
+2022,12,other_goods,Barang Lainnya,3.5,False
+2023,1,other_goods,Barang Lainnya,-3.4,False
+2023,2,other_goods,Barang Lainnya,0.6,False
+2023,3,other_goods,Barang Lainnya,4.2,False
+2023,4,other_goods,Barang Lainnya,0.5,False
+2023,5,other_goods,Barang Lainnya,0.3,False
+2023,10,other_goods,Barang Lainnya,-1.6,False
+2023,11,other_goods,Barang Lainnya,3.1,False
+2023,12,other_goods,Barang Lainnya,4.1,False
+2024,1,other_goods,Barang Lainnya,5.1,False
+2024,2,other_goods,Barang Lainnya,-1.1,False
+2024,3,other_goods,Barang Lainnya,11.4,False
+2024,4,other_goods,Barang Lainnya,-12.7,False
+2024,5,other_goods,Barang Lainnya,-0.9,False
+2024,10,other_goods,Barang Lainnya,2.0,False
+2024,11,other_goods,Barang Lainnya,1.7,False
+2024,12,other_goods,Barang Lainnya,-0.1,False
+2025,1,other_goods,Barang Lainnya,-3.6,False
+2025,2,other_goods,Barang Lainnya,6.6,False
+2025,3,other_goods,Barang Lainnya,10.8,False
+2025,4,other_goods,Barang Lainnya,-2.3,False
+2025,5,other_goods,Barang Lainnya,0.5,False
+2025,10,other_goods,Barang Lainnya,-1.6,False
+2025,11,other_goods,Barang Lainnya,0.7,False
+2025,12,other_goods,Barang Lainnya,-1.2,False
+2026,1,other_goods,Barang Lainnya,7.0,False
+2026,2,other_goods,Barang Lainnya,5.7,False
+2026,3,other_goods,Barang Lainnya,-0.2,False
+2026,4,other_goods,Barang Lainnya,-2.4,False
+2026,4,other_goods,Barang Lainnya,-2.2,False
+2026,5,other_goods,Barang Lainnya,0.7,True
+2026,5,other_goods,Barang Lainnya,3.1,True
+2012,1,sandang,- o/w Sandang,24.6,False
+2012,2,sandang,- o/w Sandang,23.5,False
+2012,3,sandang,- o/w Sandang,25.5,False
+2012,4,sandang,- o/w Sandang,21.2,False
+2012,5,sandang,- o/w Sandang,31.6,False
+2012,6,sandang,- o/w Sandang,29.9,False
+2012,7,sandang,- o/w Sandang,38.7,False
+2012,8,sandang,- o/w Sandang,20.2,False
+2012,9,sandang,- o/w Sandang,35.2,False
+2012,10,sandang,- o/w Sandang,35.2,False
+2012,11,sandang,- o/w Sandang,32.3,False
+2012,12,sandang,- o/w Sandang,22.9,False
+2013,1,sandang,- o/w Sandang,3.5,False
+2013,2,sandang,- o/w Sandang,13.6,False
+2013,3,sandang,- o/w Sandang,14.4,False
+2013,4,sandang,- o/w Sandang,23.7,False
+2013,5,sandang,- o/w Sandang,24.4,False
+2013,6,sandang,- o/w Sandang,32.3,False
+2013,7,sandang,- o/w Sandang,55.7,False
+2013,8,sandang,- o/w Sandang,4.6,False
+2013,9,sandang,- o/w Sandang,16.3,False
+2013,10,sandang,- o/w Sandang,25.9,False
+2013,11,sandang,- o/w Sandang,24.9,False
+2014,1,sandang,- o/w Sandang,28.5,False
+2014,2,sandang,- o/w Sandang,25.4,False
+2014,3,sandang,- o/w Sandang,29.4,False
+2014,4,sandang,- o/w Sandang,21.2,False
+2014,5,sandang,- o/w Sandang,16.4,False
+2014,6,sandang,- o/w Sandang,11.8,False
+2014,7,sandang,- o/w Sandang,2.0,False
+2014,8,sandang,- o/w Sandang,-21.6,False
+2014,9,sandang,- o/w Sandang,10.5,False
+2014,10,sandang,- o/w Sandang,8.7,False
+2014,11,sandang,- o/w Sandang,10.0,False
+2014,12,sandang,- o/w Sandang,6.7,False
+2015,1,sandang,- o/w Sandang,0.5,False
+2015,2,sandang,- o/w Sandang,1.9,False
+2015,3,sandang,- o/w Sandang,-5.7,False
+2015,4,sandang,- o/w Sandang,-1.9,False
+2015,5,sandang,- o/w Sandang,-5.6,False
+2015,6,sandang,- o/w Sandang,-9.8,False
+2015,7,sandang,- o/w Sandang,-3.1,False
+2015,8,sandang,- o/w Sandang,-5.9,False
+2015,9,sandang,- o/w Sandang,-12.5,False
+2015,10,sandang,- o/w Sandang,-10.4,False
+2015,11,sandang,- o/w Sandang,-14.0,False
+2015,12,sandang,- o/w Sandang,-14.9,False
+2016,1,sandang,- o/w Sandang,-9.4,False
+2016,2,sandang,- o/w Sandang,-18.2,False
+2016,3,sandang,- o/w Sandang,-15.8,False
+2016,4,sandang,- o/w Sandang,-18.1,False
+2016,5,sandang,- o/w Sandang,-14.8,False
+2016,6,sandang,- o/w Sandang,3.9,False
+2016,7,sandang,- o/w Sandang,-29.8,False
+2016,8,sandang,- o/w Sandang,-11.5,False
+2016,9,sandang,- o/w Sandang,1.3,False
+2016,10,sandang,- o/w Sandang,-5.4,False
+2016,11,sandang,- o/w Sandang,-5.0,False
+2016,12,sandang,- o/w Sandang,-3.2,False
+2017,1,sandang,- o/w Sandang,-8.7,False
+2017,2,sandang,- o/w Sandang,-4.7,False
+2017,3,sandang,- o/w Sandang,-3.3,False
+2017,4,sandang,- o/w Sandang,-3.2,False
+2017,5,sandang,- o/w Sandang,-0.6,False
+2017,6,sandang,- o/w Sandang,15.7,False
+2017,7,sandang,- o/w Sandang,-9.3,False
+2017,8,sandang,- o/w Sandang,3.0,False
+2017,9,sandang,- o/w Sandang,-1.6,False
+2017,10,sandang,- o/w Sandang,0.0,False
+2017,11,sandang,- o/w Sandang,2.2,False
+2017,12,sandang,- o/w Sandang,-1.7,False
+2018,1,sandang,- o/w Sandang,5.0,False
+2018,2,sandang,- o/w Sandang,10.2,False
+2018,3,sandang,- o/w Sandang,7.9,False
+2018,4,sandang,- o/w Sandang,10.0,False
+2018,5,sandang,- o/w Sandang,16.5,False
+2018,6,sandang,- o/w Sandang,-11.2,False
+2018,7,sandang,- o/w Sandang,13.0,False
+2018,8,sandang,- o/w Sandang,20.4,False
+2018,9,sandang,- o/w Sandang,28.1,False
+2018,10,sandang,- o/w Sandang,24.6,False
+2018,11,sandang,- o/w Sandang,29.0,False
+2018,12,sandang,- o/w Sandang,27.9,False
+2019,1,sandang,- o/w Sandang,27.9,False
+2019,2,sandang,- o/w Sandang,33.7,False
+2019,3,sandang,- o/w Sandang,41.2,False
+2019,4,sandang,- o/w Sandang,22.8,False
+2019,5,sandang,- o/w Sandang,43.9,False
+2019,6,sandang,- o/w Sandang,15.8,False
+2019,7,sandang,- o/w Sandang,6.3,False
+2019,8,sandang,- o/w Sandang,2.8,False
+2019,9,sandang,- o/w Sandang,-9.9,False
+2019,10,sandang,- o/w Sandang,-8.6,False
+2019,11,sandang,- o/w Sandang,-9.4,False
+2019,12,sandang,- o/w Sandang,0.7,False
+2020,1,sandang,- o/w Sandang,-27.5,False
+2020,2,sandang,- o/w Sandang,-40.4,False
+2020,3,sandang,- o/w Sandang,-60.5,False
+2020,4,sandang,- o/w Sandang,-70.9,False
+2020,5,sandang,- o/w Sandang,-74.0,False
+2020,6,sandang,- o/w Sandang,-73.7,False
+2020,7,sandang,- o/w Sandang,-66.5,False
+2020,8,sandang,- o/w Sandang,-64.9,False
+2020,9,sandang,- o/w Sandang,-59.7,False
+2020,10,sandang,- o/w Sandang,-58.1,False
+2020,11,sandang,- o/w Sandang,-56.6,False
+2020,12,sandang,- o/w Sandang,-59.7,False
+2021,1,sandang,- o/w Sandang,-46.3,False
+2021,2,sandang,- o/w Sandang,-41.3,False
+2021,3,sandang,- o/w Sandang,-10.8,False
+2021,4,sandang,- o/w Sandang,55.2,False
+2021,5,sandang,- o/w Sandang,52.2,False
+2021,7,sandang,- o/w Sandang,-16.0,False
+2021,8,sandang,- o/w Sandang,-14.6,False
+2021,9,sandang,- o/w Sandang,-12.0,False
+2021,10,sandang,- o/w Sandang,-4.2,False
+2021,11,sandang,- o/w Sandang,-4.9,False
+2021,12,sandang,- o/w Sandang,-0.1,False
+2022,1,sandang,- o/w Sandang,5.6,False
+2022,2,sandang,- o/w Sandang,10.2,False
+2022,3,sandang,- o/w Sandang,6.4,False
+2022,4,sandang,- o/w Sandang,26.9,False
+2022,5,sandang,- o/w Sandang,-13.7,False
+2022,9,sandang,- o/w Sandang,34.6,False
+2022,10,sandang,- o/w Sandang,25.3,False
+2022,11,sandang,- o/w Sandang,17.1,False
+2022,12,sandang,- o/w Sandang,12.7,False
+2023,1,sandang,- o/w Sandang,7.2,False
+2023,2,sandang,- o/w Sandang,16.6,False
+2023,3,sandang,- o/w Sandang,17.3,False
+2023,4,sandang,- o/w Sandang,17.6,False
+2023,5,sandang,- o/w Sandang,7.1,False
+2023,10,sandang,- o/w Sandang,8.7,False
+2023,11,sandang,- o/w Sandang,11.4,False
+2023,12,sandang,- o/w Sandang,11.0,False
+2024,1,sandang,- o/w Sandang,10.7,False
+2024,2,sandang,- o/w Sandang,0.3,False
+2024,3,sandang,- o/w Sandang,20.6,False
+2024,4,sandang,- o/w Sandang,-15.7,False
+2024,5,sandang,- o/w Sandang,2.6,False
+2024,10,sandang,- o/w Sandang,1.7,False
+2024,11,sandang,- o/w Sandang,0.6,False
+2024,12,sandang,- o/w Sandang,0.6,False
+2025,1,sandang,- o/w Sandang,-5.8,False
+2025,2,sandang,- o/w Sandang,4.9,False
+2025,3,sandang,- o/w Sandang,12.4,False
+2025,4,sandang,- o/w Sandang,-5.4,False
+2025,5,sandang,- o/w Sandang,-0.3,False
+2025,10,sandang,- o/w Sandang,-5.8,False
+2025,11,sandang,- o/w Sandang,-3.0,False
+2025,12,sandang,- o/w Sandang,-7.0,False
+2026,1,sandang,- o/w Sandang,3.4,False
+2026,2,sandang,- o/w Sandang,4.9,False
+2026,3,sandang,- o/w Sandang,-2.4,False
+2026,4,sandang,- o/w Sandang,-7.0,False
+2026,4,sandang,- o/w Sandang,-4.7,False
+2026,5,sandang,- o/w Sandang,-1.0,True
+2026,5,sandang,- o/w Sandang,6.1,True
+2012,1,spare_parts,Suku Cadang dan Aksesori,1.2,False
+2012,2,spare_parts,Suku Cadang dan Aksesori,-5.4,False
+2012,3,spare_parts,Suku Cadang dan Aksesori,-7.0,False
+2012,4,spare_parts,Suku Cadang dan Aksesori,-12.0,False
+2012,5,spare_parts,Suku Cadang dan Aksesori,-6.7,False
+2012,6,spare_parts,Suku Cadang dan Aksesori,1.7,False
+2012,7,spare_parts,Suku Cadang dan Aksesori,8.6,False
+2012,8,spare_parts,Suku Cadang dan Aksesori,-10.6,False
+2012,9,spare_parts,Suku Cadang dan Aksesori,-3.6,False
+2012,10,spare_parts,Suku Cadang dan Aksesori,8.3,False
+2012,11,spare_parts,Suku Cadang dan Aksesori,12.7,False
+2012,12,spare_parts,Suku Cadang dan Aksesori,5.1,False
+2013,1,spare_parts,Suku Cadang dan Aksesori,8.8,False
+2013,2,spare_parts,Suku Cadang dan Aksesori,14.9,False
+2013,3,spare_parts,Suku Cadang dan Aksesori,18.8,False
+2013,4,spare_parts,Suku Cadang dan Aksesori,32.9,False
+2013,5,spare_parts,Suku Cadang dan Aksesori,22.6,False
+2013,6,spare_parts,Suku Cadang dan Aksesori,10.0,False
+2013,7,spare_parts,Suku Cadang dan Aksesori,-3.8,False
+2013,8,spare_parts,Suku Cadang dan Aksesori,0.5,False
+2013,9,spare_parts,Suku Cadang dan Aksesori,2.3,False
+2013,10,spare_parts,Suku Cadang dan Aksesori,-2.0,False
+2013,11,spare_parts,Suku Cadang dan Aksesori,-7.1,False
+2014,1,spare_parts,Suku Cadang dan Aksesori,1.8,False
+2014,2,spare_parts,Suku Cadang dan Aksesori,6.5,False
+2014,3,spare_parts,Suku Cadang dan Aksesori,-2.4,False
+2014,4,spare_parts,Suku Cadang dan Aksesori,-3.6,False
+2014,5,spare_parts,Suku Cadang dan Aksesori,-4.2,False
+2014,6,spare_parts,Suku Cadang dan Aksesori,-4.2,False
+2014,7,spare_parts,Suku Cadang dan Aksesori,11.8,False
+2014,8,spare_parts,Suku Cadang dan Aksesori,11.6,False
+2014,9,spare_parts,Suku Cadang dan Aksesori,13.7,False
+2014,10,spare_parts,Suku Cadang dan Aksesori,20.5,False
+2014,11,spare_parts,Suku Cadang dan Aksesori,15.3,False
+2014,12,spare_parts,Suku Cadang dan Aksesori,-2.1,False
+2015,1,spare_parts,Suku Cadang dan Aksesori,5.7,False
+2015,2,spare_parts,Suku Cadang dan Aksesori,1.0,False
+2015,3,spare_parts,Suku Cadang dan Aksesori,-1.8,False
+2015,4,spare_parts,Suku Cadang dan Aksesori,-12.8,False
+2015,5,spare_parts,Suku Cadang dan Aksesori,-11.4,False
+2015,6,spare_parts,Suku Cadang dan Aksesori,-2.6,False
+2015,7,spare_parts,Suku Cadang dan Aksesori,-8.3,False
+2015,8,spare_parts,Suku Cadang dan Aksesori,-4.3,False
+2015,9,spare_parts,Suku Cadang dan Aksesori,-11.0,False
+2015,10,spare_parts,Suku Cadang dan Aksesori,-11.5,False
+2015,11,spare_parts,Suku Cadang dan Aksesori,-6.0,False
+2015,12,spare_parts,Suku Cadang dan Aksesori,1.4,False
+2016,1,spare_parts,Suku Cadang dan Aksesori,-2.4,False
+2016,2,spare_parts,Suku Cadang dan Aksesori,0.2,False
+2016,3,spare_parts,Suku Cadang dan Aksesori,3.7,False
+2016,4,spare_parts,Suku Cadang dan Aksesori,13.5,False
+2016,5,spare_parts,Suku Cadang dan Aksesori,16.0,False
+2016,6,spare_parts,Suku Cadang dan Aksesori,23.6,False
+2016,7,spare_parts,Suku Cadang dan Aksesori,21.7,False
+2016,8,spare_parts,Suku Cadang dan Aksesori,23.9,False
+2016,9,spare_parts,Suku Cadang dan Aksesori,26.0,False
+2016,10,spare_parts,Suku Cadang dan Aksesori,23.2,False
+2016,11,spare_parts,Suku Cadang dan Aksesori,27.6,False
+2016,12,spare_parts,Suku Cadang dan Aksesori,27.2,False
+2017,1,spare_parts,Suku Cadang dan Aksesori,16.6,False
+2017,2,spare_parts,Suku Cadang dan Aksesori,10.9,False
+2017,3,spare_parts,Suku Cadang dan Aksesori,8.3,False
+2017,4,spare_parts,Suku Cadang dan Aksesori,9.2,False
+2017,5,spare_parts,Suku Cadang dan Aksesori,8.7,False
+2017,6,spare_parts,Suku Cadang dan Aksesori,4.6,False
+2017,7,spare_parts,Suku Cadang dan Aksesori,1.8,False
+2017,8,spare_parts,Suku Cadang dan Aksesori,1.0,False
+2017,9,spare_parts,Suku Cadang dan Aksesori,1.4,False
+2017,10,spare_parts,Suku Cadang dan Aksesori,1.7,False
+2017,11,spare_parts,Suku Cadang dan Aksesori,-0.4,False
+2017,12,spare_parts,Suku Cadang dan Aksesori,-3.1,False
+2018,1,spare_parts,Suku Cadang dan Aksesori,3.7,False
+2018,2,spare_parts,Suku Cadang dan Aksesori,9.5,False
+2018,3,spare_parts,Suku Cadang dan Aksesori,11.0,False
+2018,4,spare_parts,Suku Cadang dan Aksesori,8.4,False
+2018,5,spare_parts,Suku Cadang dan Aksesori,8.3,False
+2018,6,spare_parts,Suku Cadang dan Aksesori,1.1,False
+2018,7,spare_parts,Suku Cadang dan Aksesori,1.6,False
+2018,8,spare_parts,Suku Cadang dan Aksesori,0.1,False
+2018,9,spare_parts,Suku Cadang dan Aksesori,1.3,False
+2018,10,spare_parts,Suku Cadang dan Aksesori,2.1,False
+2018,11,spare_parts,Suku Cadang dan Aksesori,2.0,False
+2018,12,spare_parts,Suku Cadang dan Aksesori,3.7,False
+2019,1,spare_parts,Suku Cadang dan Aksesori,9.4,False
+2019,2,spare_parts,Suku Cadang dan Aksesori,14.0,False
+2019,3,spare_parts,Suku Cadang dan Aksesori,20.7,False
+2019,4,spare_parts,Suku Cadang dan Aksesori,25.8,False
+2019,5,spare_parts,Suku Cadang dan Aksesori,25.4,False
+2019,6,spare_parts,Suku Cadang dan Aksesori,20.0,False
+2019,7,spare_parts,Suku Cadang dan Aksesori,23.5,False
+2019,8,spare_parts,Suku Cadang dan Aksesori,23.0,False
+2019,9,spare_parts,Suku Cadang dan Aksesori,19.0,False
+2019,10,spare_parts,Suku Cadang dan Aksesori,18.0,False
+2019,11,spare_parts,Suku Cadang dan Aksesori,17.0,False
+2019,12,spare_parts,Suku Cadang dan Aksesori,15.7,False
+2020,1,spare_parts,Suku Cadang dan Aksesori,6.2,False
+2020,2,spare_parts,Suku Cadang dan Aksesori,0.2,False
+2020,3,spare_parts,Suku Cadang dan Aksesori,-14.7,False
+2020,4,spare_parts,Suku Cadang dan Aksesori,-30.8,False
+2020,5,spare_parts,Suku Cadang dan Aksesori,-46.9,False
+2020,6,spare_parts,Suku Cadang dan Aksesori,-37.8,False
+2020,7,spare_parts,Suku Cadang dan Aksesori,-33.7,False
+2020,8,spare_parts,Suku Cadang dan Aksesori,-25.2,False
+2020,9,spare_parts,Suku Cadang dan Aksesori,-23.3,False
+2020,10,spare_parts,Suku Cadang dan Aksesori,-22.9,False
+2020,11,spare_parts,Suku Cadang dan Aksesori,-21.6,False
+2020,12,spare_parts,Suku Cadang dan Aksesori,-20.0,False
+2021,1,spare_parts,Suku Cadang dan Aksesori,-22.1,False
+2021,2,spare_parts,Suku Cadang dan Aksesori,-21.0,False
+2021,3,spare_parts,Suku Cadang dan Aksesori,-13.2,False
+2021,4,spare_parts,Suku Cadang dan Aksesori,8.1,False
+2021,5,spare_parts,Suku Cadang dan Aksesori,39.6,False
+2021,7,spare_parts,Suku Cadang dan Aksesori,-13.5,False
+2021,8,spare_parts,Suku Cadang dan Aksesori,-3.7,False
+2021,9,spare_parts,Suku Cadang dan Aksesori,-10.1,False
+2021,10,spare_parts,Suku Cadang dan Aksesori,-6.6,False
+2021,11,spare_parts,Suku Cadang dan Aksesori,-3.3,False
+2021,12,spare_parts,Suku Cadang dan Aksesori,-3.4,False
+2022,1,spare_parts,Suku Cadang dan Aksesori,4.8,False
+2022,2,spare_parts,Suku Cadang dan Aksesori,-5.3,False
+2022,3,spare_parts,Suku Cadang dan Aksesori,6.2,False
+2022,4,spare_parts,Suku Cadang dan Aksesori,1.6,False
+2022,5,spare_parts,Suku Cadang dan Aksesori,-1.3,False
+2022,9,spare_parts,Suku Cadang dan Aksesori,-0.1,False
+2022,10,spare_parts,Suku Cadang dan Aksesori,-5.2,False
+2022,11,spare_parts,Suku Cadang dan Aksesori,-9.5,False
+2022,12,spare_parts,Suku Cadang dan Aksesori,-8.2,False
+2023,1,spare_parts,Suku Cadang dan Aksesori,-10.8,False
+2023,2,spare_parts,Suku Cadang dan Aksesori,-1.5,False
+2023,3,spare_parts,Suku Cadang dan Aksesori,-9.5,False
+2023,4,spare_parts,Suku Cadang dan Aksesori,-4.9,False
+2023,5,spare_parts,Suku Cadang dan Aksesori,-1.2,False
+2023,10,spare_parts,Suku Cadang dan Aksesori,11.0,False
+2023,11,spare_parts,Suku Cadang dan Aksesori,10.8,False
+2023,12,spare_parts,Suku Cadang dan Aksesori,9.0,False
+2024,1,spare_parts,Suku Cadang dan Aksesori,9.8,False
+2024,2,spare_parts,Suku Cadang dan Aksesori,9.0,False
+2024,3,spare_parts,Suku Cadang dan Aksesori,17.3,False
+2024,4,spare_parts,Suku Cadang dan Aksesori,6.5,False
+2024,5,spare_parts,Suku Cadang dan Aksesori,11.0,False
+2024,10,spare_parts,Suku Cadang dan Aksesori,8.8,False
+2024,11,spare_parts,Suku Cadang dan Aksesori,7.2,False
+2024,12,spare_parts,Suku Cadang dan Aksesori,13.0,False
+2025,1,spare_parts,Suku Cadang dan Aksesori,15.2,False
+2025,2,spare_parts,Suku Cadang dan Aksesori,16.1,False
+2025,3,spare_parts,Suku Cadang dan Aksesori,9.5,False
+2025,4,spare_parts,Suku Cadang dan Aksesori,8.7,False
+2025,5,spare_parts,Suku Cadang dan Aksesori,1.6,False
+2025,10,spare_parts,Suku Cadang dan Aksesori,12.0,False
+2025,11,spare_parts,Suku Cadang dan Aksesori,17.7,False
+2025,12,spare_parts,Suku Cadang dan Aksesori,14.8,False
+2026,1,spare_parts,Suku Cadang dan Aksesori,7.4,False
+2026,2,spare_parts,Suku Cadang dan Aksesori,13.1,False
+2026,3,spare_parts,Suku Cadang dan Aksesori,15.5,False
+2026,4,spare_parts,Suku Cadang dan Aksesori,14.7,False
+2026,4,spare_parts,Suku Cadang dan Aksesori,-0.8,False
+2026,5,spare_parts,Suku Cadang dan Aksesori,16.6,True
+2026,5,spare_parts,Suku Cadang dan Aksesori,1.9,True
+2012,1,total_index,INDEKS TOTAL,15.1,False
+2012,2,total_index,INDEKS TOTAL,11.6,False
+2012,3,total_index,INDEKS TOTAL,12.5,False
+2012,4,total_index,INDEKS TOTAL,11.7,False
+2012,5,total_index,INDEKS TOTAL,8.0,False
+2012,6,total_index,INDEKS TOTAL,14.3,False
+2012,7,total_index,INDEKS TOTAL,20.0,False
+2012,8,total_index,INDEKS TOTAL,10.6,False
+2012,9,total_index,INDEKS TOTAL,19.2,False
+2012,10,total_index,INDEKS TOTAL,19.3,False
+2012,11,total_index,INDEKS TOTAL,17.2,False
+2012,12,total_index,INDEKS TOTAL,15.1,False
+2013,1,total_index,INDEKS TOTAL,8.0,False
+2013,2,total_index,INDEKS TOTAL,13.3,False
+2013,3,total_index,INDEKS TOTAL,9.3,False
+2013,4,total_index,INDEKS TOTAL,10.0,False
+2013,5,total_index,INDEKS TOTAL,12.0,False
+2013,6,total_index,INDEKS TOTAL,14.9,False
+2013,7,total_index,INDEKS TOTAL,15.2,False
+2013,8,total_index,INDEKS TOTAL,2.0,False
+2013,9,total_index,INDEKS TOTAL,11.4,False
+2013,10,total_index,INDEKS TOTAL,12.9,False
+2013,11,total_index,INDEKS TOTAL,17.7,False
+2014,1,total_index,INDEKS TOTAL,24.0,False
+2014,2,total_index,INDEKS TOTAL,18.8,False
+2014,3,total_index,INDEKS TOTAL,16.9,False
+2014,4,total_index,INDEKS TOTAL,15.9,False
+2014,5,total_index,INDEKS TOTAL,14.8,False
+2014,6,total_index,INDEKS TOTAL,8.7,False
+2014,7,total_index,INDEKS TOTAL,19.2,False
+2014,8,total_index,INDEKS TOTAL,8.9,False
+2014,9,total_index,INDEKS TOTAL,17.9,False
+2014,10,total_index,INDEKS TOTAL,17.6,False
+2014,11,total_index,INDEKS TOTAL,11.4,False
+2014,12,total_index,INDEKS TOTAL,3.8,False
+2015,1,total_index,INDEKS TOTAL,10.9,False
+2015,2,total_index,INDEKS TOTAL,16.0,False
+2015,3,total_index,INDEKS TOTAL,19.7,False
+2015,4,total_index,INDEKS TOTAL,23.1,False
+2015,5,total_index,INDEKS TOTAL,20.6,False
+2015,6,total_index,INDEKS TOTAL,22.3,False
+2015,7,total_index,INDEKS TOTAL,8.5,False
+2015,8,total_index,INDEKS TOTAL,5.8,False
+2015,9,total_index,INDEKS TOTAL,7.1,False
+2015,10,total_index,INDEKS TOTAL,8.7,False
+2015,11,total_index,INDEKS TOTAL,9.7,False
+2015,12,total_index,INDEKS TOTAL,11.4,False
+2016,1,total_index,INDEKS TOTAL,12.9,False
+2016,2,total_index,INDEKS TOTAL,10.6,False
+2016,3,total_index,INDEKS TOTAL,11.1,False
+2016,4,total_index,INDEKS TOTAL,11.2,False
+2016,5,total_index,INDEKS TOTAL,13.6,False
+2016,6,total_index,INDEKS TOTAL,16.3,False
+2016,7,total_index,INDEKS TOTAL,6.3,False
+2016,8,total_index,INDEKS TOTAL,11.4,False
+2016,9,total_index,INDEKS TOTAL,10.6,False
+2016,10,total_index,INDEKS TOTAL,8.1,False
+2016,11,total_index,INDEKS TOTAL,9.9,False
+2016,12,total_index,INDEKS TOTAL,10.5,False
+2017,1,total_index,INDEKS TOTAL,6.3,False
+2017,2,total_index,INDEKS TOTAL,3.7,False
+2017,3,total_index,INDEKS TOTAL,4.2,False
+2017,4,total_index,INDEKS TOTAL,4.2,False
+2017,5,total_index,INDEKS TOTAL,4.3,False
+2017,6,total_index,INDEKS TOTAL,6.3,False
+2017,7,total_index,INDEKS TOTAL,-3.3,False
+2017,8,total_index,INDEKS TOTAL,2.2,False
+2017,9,total_index,INDEKS TOTAL,1.8,False
+2017,10,total_index,INDEKS TOTAL,2.2,False
+2017,11,total_index,INDEKS TOTAL,2.5,False
+2017,12,total_index,INDEKS TOTAL,0.7,False
+2018,1,total_index,INDEKS TOTAL,-1.8,False
+2018,2,total_index,INDEKS TOTAL,1.5,False
+2018,3,total_index,INDEKS TOTAL,2.5,False
+2018,4,total_index,INDEKS TOTAL,4.1,False
+2018,5,total_index,INDEKS TOTAL,8.3,False
+2018,6,total_index,INDEKS TOTAL,2.3,False
+2018,7,total_index,INDEKS TOTAL,2.9,False
+2018,8,total_index,INDEKS TOTAL,6.1,False
+2018,9,total_index,INDEKS TOTAL,4.8,False
+2018,10,total_index,INDEKS TOTAL,2.9,False
+2018,11,total_index,INDEKS TOTAL,3.4,False
+2018,12,total_index,INDEKS TOTAL,7.7,False
+2019,1,total_index,INDEKS TOTAL,7.2,False
+2019,2,total_index,INDEKS TOTAL,9.1,False
+2019,3,total_index,INDEKS TOTAL,10.1,False
+2019,4,total_index,INDEKS TOTAL,6.7,False
+2019,5,total_index,INDEKS TOTAL,7.7,False
+2019,6,total_index,INDEKS TOTAL,-1.8,False
+2019,7,total_index,INDEKS TOTAL,2.4,False
+2019,8,total_index,INDEKS TOTAL,1.1,False
+2019,9,total_index,INDEKS TOTAL,0.7,False
+2019,10,total_index,INDEKS TOTAL,3.6,False
+2019,11,total_index,INDEKS TOTAL,1.3,False
+2019,12,total_index,INDEKS TOTAL,-0.5,False
+2020,1,total_index,INDEKS TOTAL,-0.3,False
+2020,2,total_index,INDEKS TOTAL,-0.8,False
+2020,3,total_index,INDEKS TOTAL,-4.5,False
+2020,4,total_index,INDEKS TOTAL,-16.9,False
+2020,5,total_index,INDEKS TOTAL,-20.6,False
+2020,6,total_index,INDEKS TOTAL,-17.1,False
+2020,7,total_index,INDEKS TOTAL,-12.3,False
+2020,8,total_index,INDEKS TOTAL,-9.2,False
+2020,9,total_index,INDEKS TOTAL,-8.7,False
+2020,10,total_index,INDEKS TOTAL,-14.9,False
+2020,11,total_index,INDEKS TOTAL,-16.3,False
+2020,12,total_index,INDEKS TOTAL,-19.2,False
+2021,1,total_index,INDEKS TOTAL,-16.4,False
+2021,2,total_index,INDEKS TOTAL,-18.1,False
+2021,3,total_index,INDEKS TOTAL,-14.6,False
+2021,4,total_index,INDEKS TOTAL,15.6,False
+2021,5,total_index,INDEKS TOTAL,14.7,False
+2021,7,total_index,INDEKS TOTAL,-2.9,False
+2021,8,total_index,INDEKS TOTAL,-2.1,False
+2021,9,total_index,INDEKS TOTAL,-2.2,False
+2021,10,total_index,INDEKS TOTAL,6.5,False
+2021,11,total_index,INDEKS TOTAL,10.8,False
+2021,12,total_index,INDEKS TOTAL,13.8,False
+2022,1,total_index,INDEKS TOTAL,15.2,False
+2022,2,total_index,INDEKS TOTAL,12.9,False
+2022,3,total_index,INDEKS TOTAL,9.3,False
+2022,4,total_index,INDEKS TOTAL,8.5,False
+2022,5,total_index,INDEKS TOTAL,2.9,False
+2022,9,total_index,INDEKS TOTAL,4.6,False
+2022,10,total_index,INDEKS TOTAL,3.7,False
+2022,11,total_index,INDEKS TOTAL,1.3,False
+2022,12,total_index,INDEKS TOTAL,0.7,False
+2023,1,total_index,INDEKS TOTAL,-0.6,False
+2023,2,total_index,INDEKS TOTAL,0.6,False
+2023,3,total_index,INDEKS TOTAL,4.9,False
+2023,4,total_index,INDEKS TOTAL,1.5,False
+2023,5,total_index,INDEKS TOTAL,-4.5,False
+2023,10,total_index,INDEKS TOTAL,2.4,False
+2023,11,total_index,INDEKS TOTAL,2.1,False
+2023,12,total_index,INDEKS TOTAL,0.2,False
+2024,1,total_index,INDEKS TOTAL,1.1,False
+2024,2,total_index,INDEKS TOTAL,6.4,False
+2024,3,total_index,INDEKS TOTAL,9.3,False
+2024,4,total_index,INDEKS TOTAL,-2.7,False
+2024,5,total_index,INDEKS TOTAL,2.1,False
+2024,10,total_index,INDEKS TOTAL,1.5,False
+2024,11,total_index,INDEKS TOTAL,0.9,False
+2024,12,total_index,INDEKS TOTAL,1.8,False
+2025,1,total_index,INDEKS TOTAL,0.5,False
+2025,2,total_index,INDEKS TOTAL,2.0,False
+2025,3,total_index,INDEKS TOTAL,5.5,False
+2025,4,total_index,INDEKS TOTAL,-0.3,False
+2025,5,total_index,INDEKS TOTAL,1.9,False
+2025,10,total_index,INDEKS TOTAL,4.3,False
+2025,11,total_index,INDEKS TOTAL,6.3,False
+2025,12,total_index,INDEKS TOTAL,3.5,False
+2026,1,total_index,INDEKS TOTAL,5.7,False
+2026,2,total_index,INDEKS TOTAL,6.5,False
+2026,3,total_index,INDEKS TOTAL,3.4,False
+2026,4,total_index,INDEKS TOTAL,-3.7,False
+2026,4,total_index,INDEKS TOTAL,-7.0,False
+2026,5,total_index,INDEKS TOTAL,-3.2,True
+2026,5,total_index,INDEKS TOTAL,0.4,True

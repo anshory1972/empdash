@@ -1,0 +1,11 @@
+{
+  "vintage_id": "202504",
+  "label": "WEO April 2025",
+  "release_month": 4,
+  "release_year": 2025,
+  "source": "IMF WEO SDMX download (manual)",
+  "source_file": "weoapr2025-sdmxdata.zip",
+  "imported_at": "2026-06-25T00:00:00+00:00",
+  "rows": 8711,
+  "countries": 187
+}

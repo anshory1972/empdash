@@ -15,12 +15,10 @@ build/
 venv/
 env/
 
-# ── Generated / downloaded data (reproducible via pipeline) ──────────────────
-data/cache/theme1/
-data/cache/theme2/
-data/cache/theme3/
+# ── Large binary cache files only ────────────────────────────────────────────
+data/cache/theme3/*.zip
+data/cache/theme1/*.xlsx
 data/cache/last_refresh.json
-data/output/
 
 # ── Elasticity CSV dumps (derived from eta_matrices.npz) ─────────────────────
 data/elasticity/csv/

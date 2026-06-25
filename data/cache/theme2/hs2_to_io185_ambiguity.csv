@@ -1,0 +1,99 @@
+hs2,io185_sectors,n_sectors
+12,"['AnimalFeed', 'BasChemicals', 'Cane', 'Coconut', 'Corn', 'DecorPlants', 'Fruits', 'OthFlour', 'OthGrains', 'OthPlantaton', 'PalmOil', 'Peanuts', 'PlantBiophrm', 'PlantFiber', 'Seaweed', 'Soy', 'VegFruitProc', 'Vegetables']",18
+85,"['Batteries', 'ClayCermcPrd', 'DomElectEqp', 'ElecMotorGen', 'ElectEqp', 'ElectroncPrd', 'Glass', 'Instruments', 'OfficeMachin', 'OthElecEqp', 'OthIndustPrd', 'OthMachinEqp', 'OthMetalPrd', 'PlasticPrd', 'PrimaryMover', 'Publishing', 'WasteManage']",17
+84,"['Aircraft', 'BasChemicals', 'DomElectEqp', 'ElectroncPrd', 'FabMetalPrd', 'MedicalDvces', 'MotorVehicle', 'OfficeMachin', 'OthMachinEqp', 'OthMetalPrd', 'PrimaryMover', 'PrintedPrd']",12
+38,"['BasChemicals', 'Cement', 'ClayCermcPrd', 'OilAndGasRef', 'OthChemPrd', 'OthNMmetlPrd', 'PaperPulp', 'Pesticide', 'Pharmaceutcl', 'Varnish', 'WasteManage']",11
+09,"['Clove', 'Coffee', 'CoffeeProc', 'OthFood', 'OthPlantaton', 'PlantBiophrm', 'Tea', 'TeaProc', 'Vegetables']",9
+27,"['BasChemicals', 'CoalLignite', 'CrudeOil', 'GalianPrd', 'NaturalGas', 'OilAndGasRef', 'OthNMmetlPrd', 'WasteManage']",8
+40,"['OthForestPrd', 'OthRubberPrd', 'PaperPrd', 'Plastics', 'Rubber', 'SmokedRubber', 'Tire', 'WasteManage']",8
+23,"['Abattoir', 'AlcoBeverage', 'AnimalFeed', 'EdibleOils', 'FishProcess', 'OthFlour', 'Sugar', 'WheatFlour']",8
+07,"['Cassava', 'OthNuts', 'OthTubers', 'PlantBiophrm', 'SweetPotato', 'VegFruitProc', 'Vegetables']",7
+25,"['BasChemicals', 'Cement', 'CoarseSalt', 'GalianPrd', 'NonMetlMinrl', 'OthFood', 'OthNMmetlPrd']",7
+05,"['Abattoir', 'FishProcess', 'Livestock', 'OthAnimalPrd', 'OthAquatic', 'OthIndustPrd', 'Shrimps']",7
+94,"['Furniture', 'Glass', 'MedicalDvces', 'MotorVehicle', 'OthElecEqp', 'OthTextilPrd', 'PlasticPrd']",7
+73,"['BasIronSteel', 'DomElectEqp', 'DomMetalPrd', 'FabMetalPrd', 'FoundryPrd', 'OthMetalPrd', 'PrimaryMover']",7
+44,"['BasChemicals', 'OthWoodPrdn', 'Plywood', 'SawMill', 'Wood', 'WoodBuildMat']",6
+95,"['ElectroncPrd', 'GamesAndToys', 'OthIndustPrd', 'OthTextilPrd', 'PlasticPrd', 'SportsEquip']",6
+03,"['DriedFish', 'Fish', 'FishProcess', 'OthAnimalPrd', 'OthAquatic', 'Shrimps']",6
+21,"['CoffeeProc', 'DairyPrd', 'OthFood', 'SoyProcessed', 'TeaProc', 'VegFruitProc']",6
+08,"['Cashew', 'Coconut', 'Fruits', 'OthPlantaton', 'PlantBiophrm', 'VegFruitProc']",6
+96,"['LeatherPrd', 'OthIndustPrd', 'OthMetalPrd', 'OthNMmetlPrd', 'OthTextilPrd', 'PaperPrd']",6
+10,"['Corn', 'OthFlour', 'OthGrains', 'Rice', 'RiceMilling']",5
+34,"['BasChemicals', 'OilAndGasRef', 'OthChemPrd', 'OthIndustPrd', 'Soaps']",5
+22,"['AlcoBeverage', 'BasChemicals', 'GasDist', 'NonAlcoBev', 'OthFood']",5
+04,"['DairyPrd', 'FreshMilk', 'OthAnimalPrd', 'OthForestPrd', 'PoultryEggs']",5
+28,"['BasChemicals', 'Fertilizer', 'NonFerrMetal', 'OthNMmetlPrd', 'Pharmaceutcl']",5
+87,"['MotorVehicle', 'Motorcycle', 'OthMachinEqp', 'OthTrnsEqp', 'PrimaryMover']",5
+70,"['ClayCermcPrd', 'ElectroncPrd', 'Glass', 'Textile']",4
+15,"['Abattoir', 'Copra', 'EdibleOils', 'OthChemPrd']",4
+26,"['CopperOre', 'IronOre', 'OthMetalMine', 'WasteManage']",4
+19,"['BreadBiscuit', 'OthFlour', 'OthFood', 'PastaNoodle']",4
+35,"['DairyPrd', 'OthChemPrd', 'OthFood', 'WheatFlour']",4
+39,"['BasChemicals', 'PlasticPrd', 'Plastics', 'SawMill']",4
+31,"['BasChemicals', 'Fertilizer', 'GalianPrd', 'Livestock']",4
+32,"['BasChemicals', 'OthChemPrd', 'Paints', 'Varnish']",4
+16,"['Abattoir', 'DriedFish', 'FishProcess', 'OthFood']",4
+90,"['ElectroncPrd', 'Instruments', 'MedicalDvces', 'OthElecEqp']",4
+76,"['DomMetalPrd', 'FabMetalPrd', 'NonFerrMetal', 'OthMetalPrd']",4
+59,"['OthRubberPrd', 'OthTextilPrd', 'PaperPrd', 'PlasticPrd']",4
+71,"['Jewelry', 'NonFerrMetal', 'OthAquatic', 'OthIndustPrd']",4
+63,"['Apparel', 'DomElectEqp', 'OthTextilPrd', 'WasteManage']",4
+88,"['Aircraft', 'OthMachinEqp', 'OthTextilPrd']",3
+54,"['Plastics', 'Textile', 'Yarn']",3
+74,"['DomMetalPrd', 'NonFerrMetal', 'OthMetalPrd']",3
+13,"['BasChemicals', 'OthFood', 'OthForestPrd']",3
+11,"['OthFlour', 'VegFruitProc', 'WheatFlour']",3
+17,"['Confectionry', 'OthFlour', 'Sugar']",3
+24,"['Cigarettes', 'Tobacco', 'TobaccoPrd']",3
+01,"['Livestock', 'OthAnimalPrd', 'PoultryEggs']",3
+53,"['PlantFiber', 'Textile', 'Yarn']",3
+29,"['BasChemicals', 'Pharmaceutcl', 'TradMedicine']",3
+20,"['Confectionry', 'OthFood', 'VegFruitProc']",3
+52,"['PlantFiber', 'Textile', 'Yarn']",3
+51,"['Livestock', 'Textile', 'Yarn']",3
+65,"['Apparel', 'OthIndustPrd', 'OthRubberPrd']",3
+55,"['Plastics', 'Textile', 'Yarn']",3
+49,"['OthIndustPrd', 'PrintedPrd', 'Publishing']",3
+50,"['OthAnimalPrd', 'Textile', 'Yarn']",3
+97,"['OthGovSvc', 'OthIndustPrd', 'Postal']",3
+02,"['Abattoir', 'MeatProcessg']",2
+78,"['NonFerrMetal', 'OthMetalPrd']",2
+93,"['OthMetalPrd', 'WeaponsAmmo']",2
+18,"['Cocoa', 'Confectionry']",2
+33,"['Cosmetics', 'OthChemPrd']",2
+14,"['EdibleOils', 'OthForestPrd']",2
+58,"['OthTextilPrd', 'Textile']",2
+66,"['OthIndustPrd', 'OthMetalPrd']",2
+37,"['Broadcasting', 'OthChemPrd']",2
+80,"['NonFerrMetal', 'OthMetalPrd']",2
+42,"['Apparel', 'LeatherPrd']",2
+86,"['MotorVehicle', 'RailwayEqp']",2
+91,"['Instruments', 'LeatherPrd']",2
+83,"['DomMetalPrd', 'OthMetalPrd']",2
+79,"['NonFerrMetal', 'OthMetalPrd']",2
+64,"['Footwear', 'SportsEquip']",2
+56,"['OthTextilPrd', 'RopesCarpets']",2
+48,"['Paper', 'PaperPrd']",2
+45,"['OthForestPrd', 'OthWoodPrdn']",2
+36,"['OthChemPrd', 'OthIndustPrd']",2
+43,"['Apparel', 'Tanning']",2
+47,"['PaperPrd', 'PaperPulp']",2
+68,"['ClayCermcPrd', 'OthNMmetlPrd']",2
+75,"['NonFerrMetal', 'OthMetalPrd']",2
+06,['DecorPlants'],1
+30,['Pharmaceutcl'],1
+60,['KnittedPrd'],1
+61,['Apparel'],1
+57,['RopesCarpets'],1
+41,['Tanning'],1
+46,['OthWoodPrdn'],1
+62,['Apparel'],1
+67,['OthIndustPrd'],1
+82,['DomMetalPrd'],1
+81,['NonFerrMetal'],1
+69,['ClayCermcPrd'],1
+72,['BasIronSteel'],1
+89,['Ships'],1
+92,['MusicInstrum'],1
+98,['MotorVehicle'],1
+99,['PrintedPrd'],1

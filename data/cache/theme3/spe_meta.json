@@ -1,0 +1,25 @@
+{
+  "source_url": "https://www.bi.go.id/id/publikasi/laporan/Documents/Data-Series-SPE-April-2026.zip",
+  "zip_filename": "SPE-April-2026.zip",
+  "vintage_month": "April",
+  "vintage_year": 2026,
+  "downloaded_at": "2026-06-25T08:49:40.901123+00:00",
+  "xlsx_inside_zip": "Tabel Series SPE -  April 2026.xlsx",
+  "yoy_sheet": "Tabel 2",
+  "mtm_sheet": "Tabel 3 (NOT used — yoy only per spec §6.6)",
+  "categories": {
+    "Suku Cadang dan Aksesori": "spare_parts",
+    "Makanan, Minuman, & Tembakau": "food_bev_tobacco",
+    "Bahan Bakar Kendaraan Bermotor": "fuel",
+    "Peralatan Informasi dan Komunikasi": "ict_equipment",
+    "Perlengkapan Rumah Tangga Lainnya": "household_equip",
+    "Barang Budaya dan Rekreasi": "cultural_rec",
+    "Barang Lainnya": "other_goods",
+    "- o/w Sandang": "sandang",
+    "INDEKS TOTAL": "total_index"
+  },
+  "note_sandang": "Sandang is '- o/w Sandang' sub-item of 'Barang Lainnya', not a standalone top-level category.",
+  "period_start": "2012-01",
+  "period_end": "2026-12",
+  "total_rows": 1422
+}

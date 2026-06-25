@@ -1,0 +1,217 @@
+{
+  "source_trade": "UN Comtrade, Indonesia exports, HS-6, 2023",
+  "source_crosswalk_hs_io185": "hs_io.HAR (MEXP header)",
+  "source_crosswalk_io185_52": "konkordansi 185 52.xlsx",
+  "downloaded_at": "2026-06-25T09:42:33.081463+00:00",
+  "total_export_usd": 259527724116.489,
+  "mapped_export_usd": 247396746321.174,
+  "mapped_pct": 95.32574878594859,
+  "io52_sectors": {
+    "1": "FoodCrops",
+    "2": "HortiCrops",
+    "3": "Estates",
+    "4": "Livestock",
+    "5": "AgricService",
+    "6": "Forestry",
+    "7": "Fishery",
+    "8": "Coal",
+    "9": "OilGasGeo",
+    "10": "IronOre",
+    "11": "OtherMine",
+    "12": "FoodMan",
+    "13": "Tobacco",
+    "14": "Textiles",
+    "15": "Leather",
+    "16": "WoodProd",
+    "17": "PaperProd",
+    "18": "NonMetalProd",
+    "19": "CoalOilMan",
+    "20": "Chemical",
+    "21": "Rubber",
+    "22": "BasicMetal",
+    "23": "MetalProd",
+    "24": "Machinery",
+    "25": "TranspEquip",
+    "26": "Furniture",
+    "27": "OtherMan",
+    "28": "Electricity",
+    "29": "CityGas",
+    "30": "WasteMan",
+    "31": "Construction",
+    "32": "VehicTrade",
+    "33": "OthTrade",
+    "34": "RailTransp",
+    "35": "LandTransp",
+    "36": "SeaTransp",
+    "37": "WaterTransp",
+    "38": "AirTransp",
+    "39": "TranspSvc",
+    "40": "Hotels",
+    "41": "Restaurant",
+    "42": "Telecom",
+    "43": "Finance",
+    "44": "Insurance",
+    "45": "OthFinance",
+    "46": "FinanSvc",
+    "47": "RealEstate",
+    "48": "BusSvc",
+    "49": "GovAdmin",
+    "50": "Education",
+    "51": "HealthSvc",
+    "52": "To"
+  },
+  "hs6_conflicts": {
+    "030719": [
+      "FishProcess",
+      "OthAquatic"
+    ],
+    "030749": [
+      "DriedFish",
+      "FishProcess"
+    ],
+    "030760": [
+      "OthAnimalPrd",
+      "Shrimps"
+    ],
+    "030830": [
+      "DriedFish",
+      "OthAquatic"
+    ],
+    "030890": [
+      "DriedFish",
+      "OthAquatic"
+    ],
+    "051199": [
+      "Livestock",
+      "OthAquatic"
+    ],
+    "070960": [
+      "PlantBiophrm",
+      "Vegetables"
+    ],
+    "090190": [
+      "Coffee",
+      "CoffeeProc"
+    ],
+    "110100": [
+      "OthFlour",
+      "WheatFlour"
+    ],
+    "121190": [
+      "BasChemicals",
+      "OthPlantaton"
+    ],
+    "130219": [
+      "BasChemicals",
+      "OthFood"
+    ],
+    "130239": [
+      "BasChemicals",
+      "OthFood"
+    ],
+    "150500": [
+      "Abattoir",
+      "EdibleOils"
+    ],
+    "190230": [
+      "OthFood",
+      "PastaNoodle"
+    ],
+    "210690": [
+      "OthFood",
+      "VegFruitProc"
+    ],
+    "220190": [
+      "GasDist",
+      "NonAlcoBev"
+    ],
+    "250100": [
+      "CoarseSalt",
+      "OthFood"
+    ],
+    "252020": [
+      "BasChemicals",
+      "OthNMmetlPrd"
+    ],
+    "291429": [
+      "BasChemicals",
+      "Pharmaceutcl"
+    ],
+    "310100": [
+      "Fertilizer",
+      "Livestock"
+    ],
+    "310510": [
+      "Fertilizer",
+      "GalianPrd"
+    ],
+    "380290": [
+      "BasChemicals",
+      "OthChemPrd"
+    ],
+    "390319": [
+      "Plastics",
+      "SawMill"
+    ],
+    "440290": [
+      "BasChemicals",
+      "Wood"
+    ],
+    "442199": [
+      "OthWoodPrdn",
+      "Plywood"
+    ],
+    "491191": [
+      "PrintedPrd",
+      "Publishing"
+    ],
+    "530500": [
+      "PlantFiber",
+      "Yarn"
+    ],
+    "560790": [
+      "OthTextilPrd",
+      "RopesCarpets"
+    ],
+    "580631": [
+      "OthTextilPrd",
+      "Textile"
+    ],
+    "580632": [
+      "OthTextilPrd",
+      "Textile"
+    ],
+    "847290": [
+      "ElectroncPrd",
+      "OfficeMachin"
+    ],
+    "852329": [
+      "Instruments",
+      "OfficeMachin",
+      "Publishing"
+    ],
+    "852351": [
+      "ElectroncPrd",
+      "OfficeMachin",
+      "Publishing"
+    ],
+    "852359": [
+      "OthIndustPrd",
+      "Publishing"
+    ],
+    "852380": [
+      "OfficeMachin",
+      "OthIndustPrd",
+      "Publishing"
+    ],
+    "950490": [
+      "GamesAndToys",
+      "OthTextilPrd"
+    ],
+    "961900": [
+      "OthTextilPrd",
+      "PaperPrd"
+    ]
+  },
+  "note": "w_kc = export share of sector k going to country c. Annual cadence \u2014 recompute when new Comtrade year available."
+}

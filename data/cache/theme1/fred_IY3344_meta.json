@@ -1,0 +1,11 @@
+{
+  "series_id": "IY3344",
+  "title": "Export Price Index (NAICS): Semiconductor and Other Electronic Component Manufacturing",
+  "units": "Index Dec 2005=100",
+  "frequency": "Monthly",
+  "last_updated": "2026-06-16 07:44:55-05",
+  "downloaded_at": "2026-06-25T14:34:46.195800+00:00",
+  "period_start": "2005-12-01",
+  "period_end": "2026-05-01",
+  "missing_count": 0
+}

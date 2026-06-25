@@ -1,0 +1,24 @@
+{
+  "source_url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+  "wb_page_url": "https://www.worldbank.org/en/research/commodity-markets",
+  "file_update_notice": "Updated on June 02, 2026",
+  "downloaded_at": "2026-06-25T08:40:08.896181+00:00",
+  "period_start": "1960M01",
+  "period_end": "2026M05",
+  "columns": [
+    "cpo",
+    "coal",
+    "nickel",
+    "copper",
+    "rubber",
+    "oilgas"
+  ],
+  "column_mapping": {
+    "cpo": "Palm oil",
+    "coal": "Coal, Australian",
+    "nickel": "Nickel",
+    "copper": "Copper",
+    "rubber": "Rubber, TSR20 **",
+    "oilgas": "Crude oil, average"
+  }
+}
