@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,'Inter',sans-serif;background:#f8fafc;padding:6px 10px 10px;font-size:11px;color:#334155}
+
+.theme-row{margin-bottom:8px;background:#fff;border-radius:8px;padding:7px 10px 8px;border:1px solid #e2e8f0}
+
+.theme-hdr{font-size:11.5px;font-weight:700;padding-bottom:5px;margin-bottom:7px;border-bottom:2px solid currentColor;display:flex;align-items:center;gap:4px}
+
+.sliders-row{display:flex;gap:4px;align-items:flex-end;overflow-x:auto;padding-bottom:2px}
+
+.slider-col{display:flex;flex-direction:column;align-items:center;flex:1;min-width:42px}
+
+.sval{font-size:10px;font-weight:700;height:14px;line-height:14px;text-align:center;margin-bottom:2px}
+
+.vslider-wrap{position:relative;height:100px;display:flex;align-items:center;justify-content:center;overflow:visible}
+
+/* Zero-line tick */
+.vslider-wrap::after{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:20px;height:1px;background:rgba(0,0,0,.15);pointer-events:none;z-index:0}
+
+input[type=range].vs{
+  -webkit-appearance:none;
+  appearance:none;
+  writing-mode:vertical-lr;
+  direction:rtl;
+  height:96px;
+  width:16px;
+  cursor:pointer;
+  background:transparent;
+  outline:none;
+  position:relative;
+  z-index:1;
+}
+
+/* Track */
+input[type=range].vs::-webkit-slider-runnable-track{width:6px;border-radius:3px;background:#e2e8f0}
+input[type=range].vs::-moz-range-track{width:6px;border-radius:3px;background:#e2e8f0}
+
+/* Thumb defaults */
+input[type=range].vs::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.3);margin-left:-6px}
+input[type=range].vs::-moz-range-thumb{width:18px;height:18px;border-radius:50%;border:none;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+
+/* T1 orange */
+.t1 input[type=range].vs::-webkit-slider-thumb{background:#e67e22}
+.t1 input[type=range].vs::-moz-range-thumb{background:#e67e22}
+
+/* T2 blue */
+.t2 input[type=range].vs::-webkit-slider-thumb{background:#2563eb}
+.t2 input[type=range].vs::-moz-range-thumb{background:#2563eb}
+
+/* T3 purple */
+.t3 input[type=range].vs::-webkit-slider-thumb{background:#7c3aed}
+.t3 input[type=range].vs::-moz-range-thumb{background:#7c3aed}
+
+.slbl{font-size:9px;text-align:center;color:#64748b;margin-top:4px;line-height:1.25;max-width:48px;word-break:break-word;height:28px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+var THEMES=[
+  {id:'t1',cls:'t1',color:'#e67e22',label:'T1 — Harga Komoditas',
+   sliders:[
+     {key:'cpo',lbl:'CPO'},
+     {key:'coal',lbl:'Batu bara'},
+     {key:'nickel',lbl:'Nikel'},
+     {key:'copper',lbl:'Tembaga'},
+     {key:'rubber',lbl:'Karet'},
+     {key:'oilgas',lbl:'Minyak'},
+     {key:'electronics',lbl:'Elektronik'}
+   ]},
+  {id:'t2',cls:'t2',color:'#2563eb',label:'T2 — Mitra Dagang',
+   sliders:[
+     {key:'CHN',lbl:'China'},
+     {key:'SGP',lbl:'Singapura'},
+     {key:'JPN',lbl:'Jepang'},
+     {key:'USA',lbl:'AS'},
+     {key:'PHL',lbl:'Filipina'}
+   ]},
+  {id:'t3',cls:'t3',color:'#7c3aed',label:'T3 — Permintaan Domestik',
+   sliders:[
+     {key:'food_bev_tobacco',lbl:'Makan & minum'},
+     {key:'sandang',lbl:'Pakaian'},
+     {key:'spare_parts',lbl:'Suku cadang'},
+     {key:'fuel',lbl:'BBM'},
+     {key:'ict_equipment',lbl:'ICT'},
+     {key:'household_equip',lbl:'Rumah tangga'},
+     {key:'cultural_rec',lbl:'Rekreasi'}
+   ]}
+];
+
+var vals={};
+THEMES.forEach(function(t){t.sliders.forEach(function(s){vals[s.key]=0;});});
+
+// Build DOM
+var root=document.getElementById('root');
+THEMES.forEach(function(theme){
+  var row=document.createElement('div');
+  row.className='theme-row '+theme.cls;
+
+  var hdr=document.createElement('div');
+  hdr.className='theme-hdr';
+  hdr.style.color=theme.color;
+  hdr.textContent=theme.label;
+  row.appendChild(hdr);
+
+  var sr=document.createElement('div');
+  sr.className='sliders-row';
+
+  theme.sliders.forEach(function(s){
+    var col=document.createElement('div');
+    col.className='slider-col';
+
+    var sval=document.createElement('div');
+    sval.className='sval';
+    sval.id='v_'+s.key;
+    sval.style.color=theme.color;
+    sval.textContent='0.0';
+
+    var wrap=document.createElement('div');
+    wrap.className='vslider-wrap';
+
+    var inp=document.createElement('input');
+    inp.type='range';
+    inp.className='vs';
+    inp.min='-20';
+    inp.max='20';
+    inp.step='0.5';
+    inp.value='0';
+    inp.setAttribute('data-key',s.key);
+    inp.style.accentColor=theme.color;
+
+    inp.addEventListener('input',function(){
+      var k=this.getAttribute('data-key');
+      var v=parseFloat(this.value);
+      vals[k]=v;
+      var el=document.getElementById('v_'+k);
+      el.textContent=(v>=0?'+':'')+v.toFixed(1);
+      sendVals();
+    });
+
+    wrap.appendChild(inp);
+
+    var lbl=document.createElement('div');
+    lbl.className='slbl';
+    lbl.textContent=s.lbl;
+
+    col.appendChild(sval);
+    col.appendChild(wrap);
+    col.appendChild(lbl);
+    sr.appendChild(col);
+  });
+
+  row.appendChild(sr);
+  root.appendChild(row);
+});
+
+// ─── Streamlit protocol ───────────────────────────────────────────────────────
+var _ready=false;
+
+function sendHeight(){
+  var h=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight)+20;
+  window.parent.postMessage({type:'streamlit:setFrameHeight',height:h},'*');
+}
+
+function sendVals(){
+  window.parent.postMessage({type:'streamlit:setComponentValue',value:vals,dataType:'json'},'*');
+}
+
+window.addEventListener('message',function(e){
+  if(!e.data||e.data.type!=='streamlit:render')return;
+  sendHeight();
+  sendVals();
+  _ready=true;
+});
+
+// Signal ready — retry a few times to survive potential listener timing
+function signalReady(){
+  window.parent.postMessage({type:'streamlit:componentReady',apiVersion:1},'*');
+}
+signalReady();
+setTimeout(signalReady,150);
+setTimeout(signalReady,500);
+
+// Send height after DOM fully painted at multiple checkpoints
+[100,300,700].forEach(function(ms){setTimeout(sendHeight,ms);});
+
+// ResizeObserver for robustness
+if(typeof ResizeObserver!=='undefined'){
+  new ResizeObserver(function(){sendHeight();}).observe(document.body);
+}
+</script>
+</body>
+</html>

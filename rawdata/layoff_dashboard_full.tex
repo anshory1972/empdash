@@ -1,0 +1,870 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+
+\newtcolorbox{warningbox}{colback=red!5!white, colframe=red!60!black, breakable, title=Implementation Warning}
+\newtcolorbox{decisionbox}{colback=blue!5!white, colframe=blue!50!black, breakable, title=Design Decision}
+
+\title{A Linearized Multi-Theme CGE Approach to a Real-Time \\
+Sectoral--Regional Layoff-Risk Dashboard for Indonesia: \\
+Methodology and Data Retrieval Pipeline}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Purpose and Overview}
+
+This document specifies the methodology and complete data-retrieval pipeline
+for a dashboard that maps current economic conditions into a
+\textbf{52-sector $\times$ 34-province} matrix of employment change, used as
+an early-warning layoff-risk signal for Indonesia. The dashboard is intended
+for use by Indonesia's Ministry of Manpower (Kemnaker) and is built on
+IndoTERM, a computable general equilibrium (CGE) model of the Indonesian
+economy.
+
+\subsection{The Core Design Problem}
+
+A full CGE solve is computationally expensive and cannot be run live every
+time a user presses ``update.'' The design solves this by separating two
+steps with very different cost profiles:
+
+\begin{enumerate}
+  \item \textbf{Offline calibration} (expensive, infrequent): IndoTERM is
+  solved once per shock, at a small (1\%) perturbation, to obtain a
+  calibrated elasticity --- the percentage employment response in every
+  sector--province cell to a unit shock. This step is run by the user
+  outside the dashboard and only needs to be repeated when the model,
+  closure rules, or base-year Social Accounting Matrix (SAM) change.
+  \item \textbf{Live aggregation} (cheap, every refresh): on each dashboard
+  update, the system retrieves the latest values of various real-world
+  economic indicators, converts them into shock magnitudes, and multiplies
+  them against the pre-calibrated elasticities --- a simple tensor
+  contraction, not a CGE solve.
+\end{enumerate}
+
+This is a deliberate, documented shortcut, not an oversight. Section~\ref{sec:limitations}
+states explicitly which assumptions this rests on, and Section~\ref{sec:future}
+describes the planned transition away from this shortcut once server-side,
+on-demand CGE solving becomes feasible.
+
+\subsection{Three Shock Themes}
+
+Three conceptually distinct families of shocks feed into the same
+sector--province matrix:
+
+\begin{description}
+  \item[Theme 1 --- Commodity Price Shocks.] World/domestic price changes in
+  eight key Indonesian export and import commodities, directly affecting
+  the sectors that produce or use them.
+  \item[Theme 2 --- Trading-Partner Growth Shocks.] Revisions to IMF growth
+  forecasts for Indonesia's trading partners, translated into
+  export-demand shocks for tradable sectors via each sector's actual
+  country-by-country export exposure.
+  \item[Theme 3 --- Domestic Demand Shocks.] Deviations of domestic retail
+  sales volume from trend, by category, capturing slowdowns in
+  domestically-oriented sectors that the first two themes, being
+  externally focused, do not.
+\end{description}
+
+Each theme constructs its own shock magnitudes from different real-world
+data sources (detailed in Sections~\ref{sec:theme1}--\ref{sec:theme3}) and is
+multiplied against its own, separately-calibrated elasticity tensor (a
+deliberate modeling choice explained in Section~\ref{sec:elasticity-scope}).
+The three themes' contributions are then summed (Section~\ref{sec:aggregation})
+into a single severity-weighted heatmap (Section~\ref{sec:heatmap}).
+
+\section{Notation}
+
+\begin{longtable}{@{}p{3cm}p{11.5cm}@{}}
+\toprule
+Symbol & Meaning \\
+\midrule
+\endhead
+$i$ & Sector index, $i = 1,\dots,52$ (IndoTERM's \texttt{AGGIND} aggregation) \\
+$r$ & Province index, $r = 1,\dots,34$ \\
+$j$ & Generic shock index within a theme \\
+$\theta$ & Theme index, $\theta \in \{1,2,3\}$ \\
+$\eta_{i,r,j}^{(\theta)}$ & Calibrated elasticity: \% change in employment in
+  cell $(i,r)$ induced by a 1\% shock to driver $j$ under theme $\theta$,
+  holding all other shocks at zero \\
+$x_j$ & Live shock magnitude for driver $j$, the dashboard's run-time input \\
+$E_{i,r}^{(\theta)}$ & Theme $\theta$'s contribution to total \% employment
+  change in cell $(i,r)$ \\
+$E_{i,r}$ & Total \% employment change in cell $(i,r)$, summed across all
+  three themes \\
+$L_{i,r}^{0}$ & Baseline (most recently observed) employment level in cell
+  $(i,r)$ \\
+$\Delta L_{i,r}$ & Absolute employment change in cell $(i,r)$ --- the
+  dashboard's primary heatmap output \\
+$\mathcal{K}$ & The subset of the 52 sectors with material export exposure
+  (Theme 2's shock-target set) \\
+$d^g_c$ & Revision to country $c$'s IMF growth forecast between consecutive
+  WEO vintages, for the same target year \\
+$w_{k,c}$ & Country $c$'s share of sector $k$'s total Indonesian exports \\
+$g_{i,t}^{yoy}$ & Year-on-year growth rate of real retail sales (IPR) for
+  category $i$ at month $t$ \\
+$\bar g_{i,t}$ & Trailing 36-month moving average of $g_{i,t}^{yoy}$ \\
+\bottomrule
+\end{longtable}
+
+\section{Sector and Region Classification}
+\label{sec:classification}
+
+\subsection{The 52-Sector Aggregation}
+
+Sectors follow IndoTERM's own 52-industry aggregation (\texttt{AGGIND} /
+\texttt{AGGCOM}), itself an aggregation of a 185-sector base classification
+(\texttt{IND} / \texttt{COM}), with the many-to-one mapping recorded in
+\texttt{MIND} / \texttt{MCOM}. The source file (\texttt{sec52.agg}) is a
+GEMPACK HAR (Header Array) file --- a binary format requiring GEMPACK or the
+\texttt{HARpy} Python library to parse programmatically; it is \emph{not} a
+plain-text or CSV file, and generic text/CSV readers will not parse it
+correctly.
+
+The 52 sectors, in their native order, are listed in
+Table~\ref{tab:sector52}.
+
+\begin{longtable}{@{}p{0.6cm}p{2.8cm}p{0.6cm}p{2.8cm}p{0.6cm}p{2.8cm}p{0.6cm}p{2.8cm}@{}}
+\caption{The 52-sector IndoTERM aggregation.}
+\label{tab:sector52} \\
+\toprule
+\# & Sector & \# & Sector & \# & Sector & \# & Sector \\
+\midrule
+\endhead
+1 & FoodCrops & 14 & Textiles & 27 & OtherMan & 40 & Hotels \\
+2 & HortiCrops & 15 & Leather & 28 & Electricity & 41 & Restaurant \\
+3 & Estates & 16 & WoodProd & 29 & CityGas & 42 & Telecom \\
+4 & Livestock & 17 & PaperProd & 30 & WasteMan & 43 & Finance \\
+5 & AgricService & 18 & NonMetalProd & 31 & Construction & 44 & Insurance \\
+6 & Forestry & 19 & CoalOilMan & 32 & VehicTrade & 45 & OthFinance \\
+7 & Fishery & 20 & Chemical & 33 & OthTrade & 46 & FinanSvc \\
+8 & Coal & 21 & Rubber & 34 & RailTransp & 47 & RealEstate \\
+9 & OilGasGeo & 22 & BasicMetal & 35 & LandTransp & 48 & BusSvc \\
+10 & IronOre & 23 & MetalProd & 36 & SeaTransp & 49 & GovAdmin \\
+11 & OtherMine & 24 & Machinery & 37 & WaterTransp & 50 & Education \\
+12 & FoodMan & 25 & TranspEquip & 38 & AirTransp & 51 & HealthSvc \\
+13 & Tobacco & 26 & Furniture & 39 & TranspSvc & 52 & OtherSvc \\
+\bottomrule
+\end{longtable}
+
+\noindent Codes 1--7 correspond to agriculture/forestry/fishery, 8--11 to
+mining, 12--27 to manufacturing (16 industries --- by far the largest single
+bucket, and where most of Theme 1's commodities and most of Theme 3's
+mapping decisions concentrate), and 28--52 to utilities, construction, and
+services (25 industries, almost entirely non-tradable and outside Theme 2's
+shock-target set $\mathcal{K}$).
+
+\subsection{Provinces}
+
+Regions correspond to Indonesia's 34 provinces, matching the dimension used
+in BPS's Inter-Regional Input-Output Table (52 Industries $\times$ 34
+Provinces, 2016), which also supplies the baseline employment/output data
+referenced in Section~\ref{sec:heatmap}.
+
+\section{Theme 1: Commodity Price Shocks}
+\label{sec:theme1}
+
+\subsection{Mechanism}
+
+Eight key commodities, chosen for their combination of (a) large weight in
+Indonesia's export or import structure, and (b) geographic concentration
+making them informative at the province level, are each calibrated as an
+independent 1\% world-price perturbation in IndoTERM.
+
+\subsection{Commodity List and Data Sources}
+
+\begin{longtable}{@{}p{2.3cm}p{3.6cm}p{4cm}p{3.5cm}@{}}
+\caption{Theme 1 commodities, reference series, and data access.}
+\label{tab:theme1-sources} \\
+\toprule
+Commodity & Reference series & Source & Access \\
+\midrule
+\endhead
+CPO / palm oil & Bursa Malaysia FCPO & Commodities-API; or World Bank Pink
+  Sheet & Paid REST API (real-time) or free monthly XLSX \\
+Coal & Newcastle, 6000 kcal/kg & World Bank Pink Sheet & Free monthly XLSX \\
+Nickel & LME cathodes & World Bank Pink Sheet & Free monthly XLSX \\
+Copper & LME grade A & World Bank Pink Sheet & Free monthly XLSX \\
+TGF (textiles/garments/footwear) & demand-side; no single world price &
+  see Theme 2 for the demand-side construction & --- \\
+Electronics & demand-side; no single world price & PHLX Semiconductor Index
+  (SOX); or BLS export price index, FRED series \texttt{IY3344} & Market
+  data API (real-time); or FRED API (free, monthly) \\
+Rubber & Asia TSR 20, SICOM nearby & World Bank Pink Sheet & Free monthly
+  XLSX \\
+Oil/gas & Brent/Dubai/WTI average & World Bank Pink Sheet (monthly); or
+  FRED/EIA (daily) & Free API \\
+\bottomrule
+\end{longtable}
+
+\noindent The World Bank Pink Sheet (\texttt{CMO-Historical-Data-Monthly.xlsx},
+fixed URL, updated monthly, no API key) is the single source covering coal,
+nickel, copper, rubber, and oil/gas --- five of the eight commodities --- and
+is the recommended primary source for those five. Oil/gas additionally has a
+genuine daily-frequency free REST API (FRED or EIA) if higher refresh
+frequency than monthly is desired for that one commodity specifically.
+
+\subsection{Shock Magnitude Construction}
+
+On each refresh, the latest available value of the raw driver, $X_{j,t}$,
+and its value one period prior, $X_{j,t-1}$, are retrieved, and:
+\begin{equation}
+  x_j = 100 \times \frac{X_{j,t} - X_{j,t-1}}{X_{j,t-1}}.
+  \label{eq:theme1-xj}
+\end{equation}
+
+\begin{warningbox}
+The formula $x_j = 100 \cdot X_{j,t}/X_{j,t-1}$, without subtracting 1
+(equivalently, without subtracting $X_{j,t-1}$ in the numerator), does
+\emph{not} return zero when $X_{j,t} = X_{j,t-1}$, and will silently
+corrupt every downstream calculation. \textbf{Enforce with a pipeline unit
+test:} feed a synthetic flat series (no period-over-period change) into the
+pipeline and assert that $x_j = 0$ exactly. If $t$ and $t-1$ are not
+calendar years, the chosen frequency must match the frequency used in the
+elasticity calibration (Section~\ref{sec:theme1-calibration}), and every
+series should carry an explicit timestamp/frequency tag so mismatched
+vintages across commodities are visible rather than silently blended.
+\end{warningbox}
+
+\subsection{Elasticity Calibration}
+\label{sec:theme1-calibration}
+
+For each of the 8 commodities, IndoTERM is solved once with a 1\%
+perturbation applied to that commodity's price alone, all other shocks held
+at zero:
+\begin{equation}
+  \eta_{i,r,j}^{(1)} = e_{i,r,j}\Big|_{x_j = 1\%}, \qquad j = 1,\dots,8,
+  \label{eq:theme1-eta}
+\end{equation}
+producing \textbf{8 full $52\times34$ elasticity matrices}. This step is run
+offline by the user in IndoTERM and is not automated by the data-retrieval
+pipeline described in this document.
+
+\section{Theme 2: Trading-Partner Growth Shocks}
+\label{sec:theme2}
+
+\subsection{Mechanism}
+
+A trading partner's growth-forecast revision is treated as a uniform,
+economy-wide demand shifter facing \emph{all} Indonesian exports to that
+country: a 1 percentage-point (pp) revision to country $c$'s growth forecast
+is assumed to produce a 1\% change in demand for any Indonesian export to
+$c$ (unit pass-through). Product-level differentiation in the resulting
+shock comes entirely from \emph{which countries buy how much of each
+product} --- i.e., from each sector's own export destination profile --- not
+from a separately estimated income elasticity per product or per country.
+
+\begin{decisionbox}
+This unit-pass-through assumption is a deliberate simplification, not an
+estimated parameter. Real income elasticities of import demand are often
+estimated above 1 (sometimes well above, for industrial/commodity inputs
+such as nickel or steel). Estimating product/country-specific elasticities
+from historical Comtrade export values regressed against historical partner
+GDP is the natural upgrade path (Section~\ref{sec:future}).
+\end{decisionbox}
+
+\subsection{Step 1: Country Growth Revisions}
+
+For each country $c$ covered by the IMF World Economic Outlook (WEO), the
+forecast revision for the same target year $t$, comparing the current
+release to the immediately preceding one, is:
+\begin{equation}
+  d^g_c = g_{c,t}^{\text{(current vintage)}} - g_{c,t}^{\text{(prior vintage)}}.
+  \label{eq:theme2-dgc}
+\end{equation}
+
+\paragraph{Data source.} IMF World Economic Outlook database, accessed via
+the IMF's free SDMX 2.1/3.0 REST API (base URL \texttt{api.imf.org/external/sdmx/3.0},
+dataflow \texttt{WEO}, no API key required). Example query construction (Python,
+via the \texttt{sdmx1} library or direct REST calls):
+\begin{verbatim}
+import sdmx
+IMF_DATA = sdmx.Client('IMF_DATA')
+data_msg = IMF_DATA.data('WEO', key='CHN.NGDP_RPCH', params={'startPeriod': '2024'})
+\end{verbatim}
+where \texttt{NGDP\_RPCH} is the WEO indicator code for real GDP growth and
+\texttt{CHN} is the ISO country code (China).
+
+\begin{warningbox}
+WEO is published only \textbf{3 times per year} (April, September/October,
+and a January interim Update). The dashboard's ``press update'' refresh
+\textbf{will not see a new value for $d^g_c$ between these three release
+dates} --- this is a genuine constraint of the underlying data, not a
+limitation of the pipeline. The dashboard UI should indicate the WEO vintage
+currently in use (e.g., ``as of April 2026 WEO'') rather than imply daily
+freshness for this theme.
+\end{warningbox}
+
+\subsection{Step 2: Export-Share Weights}
+
+For each tradable sector $k \in \mathcal{K}$ (defined in
+Section~\ref{sec:theme2-K}), Indonesia's export value to its destination
+countries is retrieved and converted into shares:
+\begin{equation}
+  w_{k,c} = \frac{X_{k,c}}{\sum_{c'} X_{k,c'}}.
+  \label{eq:theme2-weights}
+\end{equation}
+
+\paragraph{Data sources (either is viable; both are free and key-based).}
+\begin{itemize}
+  \item \textbf{UN Comtrade}: free API key registration; up to 100,000
+  records per query and 500 API calls per day on the free tier. Official
+  Python wrapper \texttt{comtradeapicall} or R wrapper \texttt{comtradr}
+  simplify querying by reporter (Indonesia), partner country, HS code, and
+  flow direction (exports).
+  \item \textbf{BPS WebAPI} (\texttt{webapi.bps.go.id}): free API key; the
+  \texttt{dataexim} resource exposes Indonesia's own export/import data
+  directly by HS code, in JSON, e.g.
+  \begin{verbatim}
+https://webapi.bps.go.id/v1/api/dataexim/sumber/{sumber}/kodehs/{kodehs}
+/jenishs/{jenishs}/tahun/{tahun}/periode/{periode}/key/{key}
+  \end{verbatim}
+  with an official Python wrapper (\texttt{stadata}) available.
+\end{itemize}
+
+\begin{decisionbox}
+Export-share weights $w_{k,c}$ change slowly (annual trade patterns, not
+month-to-month), so this step does \textbf{not} need to be re-run on every
+dashboard refresh. Recompute annually (or whenever a new year of Comtrade/BPS
+trade data becomes available) and cache; only $d^g_c$ (Step 1) needs to be
+checked against the live WEO release schedule on every refresh.
+\end{decisionbox}
+
+\subsection{Step 3: Aggregation into a Sector-Specific Shock}
+
+The shock magnitude for sector $k$ is the export-share-weighted average of
+the growth-forecast revisions facing its actual buyers:
+\begin{equation}
+  x_k = q_k^T = \sum_{c} w_{k,c} \cdot d^g_c.
+  \label{eq:theme2-agg}
+\end{equation}
+
+\paragraph{Derivation note.} An earlier, more general formulation considered
+a separate income elasticity $\epsilon_{i,c}$ per (product, country) pair,
+giving $q_{i,c} = \epsilon_i \cdot d^g_c$ aggregated as
+$q_i^T = \sum_c w_{i,c}\epsilon_i d^g_c = \epsilon_i \sum_c w_{i,c} d^g_c$.
+Under the unit-pass-through assumption ($\epsilon_i \equiv 1$ for all
+products, applied uniformly across countries rather than varying by
+country), this collapses exactly to Equation~\eqref{eq:theme2-agg}: there is
+no need to ever materialize a per-country shock $q_{k,c}$ individually, only
+the weighted average.
+
+\subsection{The Tradable Sector Set $\mathcal{K}$}
+\label{sec:theme2-K}
+
+Not all 52 sectors have meaningful export exposure; shocking sectors with
+near-zero export shares would add CGE-calibration cost for negligible
+benefit. $\mathcal{K}$ is determined empirically from the export column of
+the 52-sector Input-Output table (export value $\div$ total output per
+sector, against a chosen threshold --- 1\% or 5\% are reasonable candidates;
+the exact cutoff is a user decision not yet finalized).
+
+\begin{warningbox}
+The sector list below is a \textbf{category-level estimate} based on which
+of the 52 sectors are agriculture/mining/manufacturing (vs.\ services,
+utilities, construction, which are excluded with high confidence). It has
+not yet been verified row-by-row against actual export/output ratios in the
+IO table. Treat as a starting point for verification, not a final list.
+\end{warningbox}
+
+Candidate $\mathcal{K}$ (by sector number and name, from
+Table~\ref{tab:sector52}): 3 (Estates), 7 (Fishery), 8 (Coal), 9 (OilGasGeo),
+10 (IronOre), 11 (OtherMine), 12 (FoodMan), 14 (Textiles), 15 (Leather), 16
+(WoodProd), 19 (CoalOilMan), 20 (Chemical), 21 (Rubber), 22 (BasicMetal), 23
+(MetalProd), 24 (Machinery), 25 (TranspEquip), 26 (Furniture) --- approximately
+\textbf{17--18 sectors}.
+
+\subsection{Elasticity Calibration}
+
+For each sector $k \in \mathcal{K}$, IndoTERM is solved once with a 1\%
+export-demand perturbation to sector $k$ alone:
+\begin{equation}
+  \eta_{i,r,k}^{(2)} = e_{i,r,k}\Big|_{x_k = 1\%}, \qquad k \in \mathcal{K},
+\end{equation}
+producing \textbf{approximately 17 full $52\times34$ elasticity matrices}.
+
+\section{Theme 3: Domestic Demand Shocks}
+\label{sec:theme3}
+
+\subsection{Mechanism and Motivation}
+
+Themes 1 and 2 are both externally focused (world prices, foreign growth)
+and so are silent on purely domestic demand conditions --- relevant for
+sectors selling mainly to Indonesian consumers (retail, domestically-oriented
+manufacturing, food processing for the domestic market). Theme 3 fills this
+gap using Bank Indonesia's real (volume) retail sales index.
+
+\subsection{Why a Real (Volume) Index, Not a Price Index}
+
+An earlier design considered Indonesia's Consumer Price Index (CPI) as the
+domestic-demand signal. This was rejected: a price index alone cannot
+distinguish a demand-driven price change from a supply/cost-push price
+change --- a price rise is consistent with either rising demand (price up,
+quantity up) or a negative supply shock (price up, quantity down), and these
+have opposite implications for layoff risk. The originally proposed
+resolution was a price--quantity co-movement check (pairing CPI with a
+volume series and only treating a price move as demand-driven when price and
+quantity move in the same direction). This check was \textbf{dropped} once
+the design moved to Bank Indonesia's \emph{Indeks Penjualan Riil} (IPR,
+``Real Sales Index''): IPR is already a deflated, real/volume measure, so
+the price/demand identification problem that motivated the co-movement check
+does not arise from this series in the first place, and the extra CPI-fetch
+step would be solving an already-solved problem.
+
+\begin{warningbox}
+\textbf{Accepted, transparent simplification:} this reasoning assumes Bank
+Indonesia's internal deflation of IPR is adequate. If BI's deflator
+imperfectly strips out category-specific price effects (e.g.\ uses a
+general rather than category-specific price index internally), some
+residual price-driven variation could still leak into the yoy growth figure
+used as Theme 3's shock. This is not independently re-verified against CPI
+in this version of the design --- a contestable but openly stated choice,
+not an oversight.
+\end{warningbox}
+
+\subsection{Data Source}
+
+Bank Indonesia's Survei Penjualan Eceran (SPE, Retail Sales Survey),
+specifically its headline output, the Indeks Penjualan Riil (IPR). Published
+monthly. There is no key-based REST API; data is distributed as a
+downloadable zip file attached to each month's release page, at a
+predictable URL pattern:
+\begin{verbatim}
+https://www.bi.go.id/id/publikasi/laporan/Documents/
+Data-Series-SPE-{Month}-{Year}.zip
+\end{verbatim}
+where \texttt{\{Month\}} is the Indonesian month name (e.g.\ \texttt{Februari})
+and \texttt{\{Year\}} the four-digit year. The release page itself follows the
+analogous pattern \texttt{.../Pages/SPE-\{Month\}-\{Year\}.aspx}.
+
+\subsection{``Press Update'' Logic for Theme 3}
+
+\begin{enumerate}
+  \item Construct the expected URL for the current month/year using the
+  pattern above.
+  \item Issue a HEAD request (or attempt a fetch with graceful fallback) to
+  check whether this URL exists and differs from the last cached vintage.
+  \item If a newer month's zip is available: download, unzip, extract the
+  category-level yoy growth series, append to the cached historical panel.
+  \item If not (i.e.\ the current month's release has not yet been
+  published): proceed using the most recently cached vintage; do not error.
+\end{enumerate}
+
+\subsection{IPR Categories}
+
+IPR publishes seven categories, retained in full in the data pipeline
+regardless of whether each one is ultimately wired into an elasticity (see
+Section~\ref{sec:theme3-mapping}):
+
+\begin{enumerate}
+  \item Makanan, Minuman, dan Tembakau (Food, Beverages, Tobacco)
+  \item Sandang (Clothing/Textiles)
+  \item Suku Cadang dan Aksesori (Automotive Spare Parts and Accessories)
+  \item Bahan Bakar Kendaraan Bermotor (Motor Vehicle Fuel)
+  \item Barang Budaya dan Rekreasi (Cultural and Recreational Goods)
+  \item Peralatan Informasi dan Komunikasi (Information and Communication
+  Equipment)
+  \item Perlengkapan Rumah Tangga Lainnya (Other Household Equipment)
+\end{enumerate}
+
+\subsection{Why Year-on-Year, Not Month-to-Month}
+
+IPR publishes growth both year-on-year (yoy) and month-to-month (mtm).
+\textbf{Only the yoy figure is used.} Indonesian retail sales carry strong,
+recurring seasonality tied to the national religious/holiday calendar
+(Ramadan, Idulfitri, Christmas/New Year), and these dates shift by
+approximately 11 days earlier each Gregorian year for the lunar-calendar
+holidays. Comparing month $t$ to month $t-12$ (yoy) automatically cancels
+this seasonality; compounding mtm growth into an annualized rate does not,
+and will badly overstate or understate the true signal whenever a holiday
+period falls in the observation window. (BPS/BI press releases routinely and
+explicitly attribute large mtm swings to specific holiday periods,
+confirming the size of this seasonal effect.)
+
+\subsection{Benchmark/Trend and Shock Construction}
+
+Raw yoy growth is always technically signed correctly (it can be negative),
+but a positive-yet-low growth rate still represents a meaningful
+\emph{slowdown} relative to a sector's normal trend, and a layoff-risk
+signal needs to register that as a negative shock --- not as ``still
+growing, so still fine.'' The shock is therefore constructed as a
+\textbf{deviation from a trailing benchmark}, not the raw yoy growth rate
+itself:
+\begin{equation}
+  \bar g_{i,t} = \frac{1}{36}\sum_{k=1}^{36} g_{i,t-k}^{yoy},
+  \qquad
+  x_i = g_{i,t}^{yoy} - \bar g_{i,t}.
+  \label{eq:theme3-shock}
+\end{equation}
+
+\begin{decisionbox}
+A trailing 36-month moving average was chosen over (a) a fixed historical
+base-period mean, which requires an arbitrary choice of reference window and
+does not adapt to genuine structural shifts (e.g.\ permanent changes in
+e-commerce penetration affecting the ICT-equipment category), and (b) formal
+trend extraction (HP filter or similar), judged disproportionate for a
+first-version dashboard and subject to end-point bias exactly where the
+signal is most needed. The 36-month window is long enough to average out
+holiday-timing noise across different years while remaining short enough to
+track genuine multi-year drift.
+\end{decisionbox}
+
+\begin{warningbox}
+$\bar g_{i,t}$ requires \textbf{at least 36 months of historical data before
+it can be computed for the first time}. The initial pipeline setup must
+backfill several years of past SPE zip files (not just the current month)
+before Theme 3 can produce any output. Each subsequent monthly refresh only
+needs to add one new observation and slide the window forward.
+\end{warningbox}
+
+\subsection{Regional Dimension: National Shock, Regional Elasticity}
+\label{sec:theme3-regional}
+
+IPR's underlying survey covers a limited set of cities, not all 34
+provinces, so $x_i$ is constructed and used as a \textbf{single national
+value per category} --- there is no $x_{i,r}$ varying by province. All
+regional differentiation in Theme 3's contribution to the heatmap comes
+entirely from the elasticity tensor $\eta^{(3)}_{i,r,m}$, which \emph{is}
+fully calibrated at $52\times34$ resolution. This means a national
+slowdown in, say, domestic clothing sales is assumed to affect every
+province's clothing-sector employment in the same relative direction, with
+only the magnitude of that effect varying by province (through $\eta$) ---
+genuine sub-national divergence in domestic demand itself (one province
+softening while another strengthens) is not captured by this version.
+
+\begin{decisionbox}
+This national-shock/regional-elasticity structure is not unique to Theme 3
+--- Theme 1 (a world commodity price) and Theme 2 (a country's growth
+forecast) are also necessarily national-level shocks, since neither has an
+Indonesian regional dimension to begin with. All three themes therefore
+share the same underlying structural pattern: a single national shock
+magnitude, multiplied against a fully region-differentiated elasticity
+tensor.
+\end{decisionbox}
+
+\subsection{Mapping IPR Categories to the 52-Sector Classification}
+\label{sec:theme3-mapping}
+
+This mapping is performed manually by the model's developer, not
+automated by the data pipeline, since several IPR categories are diffuse
+enough to require judgment (and some may legitimately split across more
+than one of the 52 sectors). Indicative mappings, based on category content
+alone:
+
+\begin{itemize}
+  \item Makanan, Minuman, dan Tembakau $\to$ FoodMan (12), possibly
+  Tobacco (13)
+  \item Sandang $\to$ Textiles (14), possibly Leather (15)
+  \item Suku Cadang dan Aksesori $\to$ TranspEquip (25)
+  \item Bahan Bakar Kendaraan Bermotor $\to$ OilGasGeo (9) and/or
+  CoalOilMan (19)
+  \item Barang Budaya dan Rekreasi $\to$ diffuse; candidate sectors include
+  OtherMan (27), OthTrade (33), or a services sector, pending the
+  developer's judgment
+  \item Peralatan Informasi dan Komunikasi $\to$ Machinery (24) (where
+  electronics is aggregated in this classification)
+  \item Perlengkapan Rumah Tangga Lainnya $\to$ Furniture (26), possibly
+  splitting with other manufacturing sectors
+\end{itemize}
+
+\subsection{Elasticity Calibration: All 52 Sectors}
+\label{sec:theme3-calibration}
+
+\begin{decisionbox}
+Unlike Theme 2, where the elasticity-target set was restricted to
+$\mathcal{K}$ (tradable sectors only) because non-tradable sectors have
+negligible export-demand exposure by construction, Theme 3's elasticity
+target set is \textbf{all 52 sectors, with no pre-filtering by IPR's current
+category coverage}. The reasoning: every sector sells \emph{something}
+domestically, even sectors IPR's seven categories do not currently observe;
+whether a sector's domestic-demand elasticity turns out to be economically
+negligible is itself a CGE result to be discovered, not an assumption to be
+imposed in advance based on today's data availability. Calibrating all 52
+up front means that if more granular domestic-demand data becomes available
+later (e.g.\ from Susenas or an expanded retail survey), the elasticity side
+of the pipeline is already complete and does not block using it.
+\end{decisionbox}
+
+For each of the 52 sectors, IndoTERM is solved once with a 1\%
+domestic-demand perturbation to that sector alone:
+\begin{equation}
+  \eta_{i,r,m}^{(3)} = e_{i,r,m}\Big|_{x_m = 1\%}, \qquad m = 1,\dots,52,
+\end{equation}
+producing \textbf{52 full $52\times34$ elasticity matrices} --- the largest
+single calibration task among the three themes.
+
+\section{Why Elasticities Are Theme-Specific}
+\label{sec:elasticity-scope}
+
+A central design decision, worth stating explicitly because it substantially
+affects the total CGE-calibration workload: \textbf{a sector's elasticity
+tensor is not shared across themes}, even when the same sector is the
+directly-shocked target under more than one theme (e.g.\ Textiles appears in
+Theme 1 as an export-price target and, via the Sandang mapping, in Theme 3
+as a domestic-demand target).
+
+The justification is economic, not merely a bookkeeping convention: a
+domestic-demand shock and an export-price shock to the same sector are
+mechanically different perturbations to IndoTERM. They enter the model
+through different channels (domestic final consumption vs.\ export
+price/demand), and they can plausibly activate different substitution
+elasticities and different general-equilibrium feedback paths as they
+propagate through the input-output structure --- domestic consumers and
+export markets need not substitute toward or away from a sector's output in
+the same way. Treating $\eta^{(1)}_{i,r,\text{Textiles}}$ and
+$\eta^{(3)}_{i,r,\text{Textiles}}$ as identical would be assuming away a real
+distinction rather than testing or justifying it.
+
+The consequence is a larger total calibration workload than a
+shared-elasticity design would require, summarized in
+Table~\ref{tab:elasticity-scope}.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lccl@{}}
+\toprule
+Theme & \# of shocks & \# of $52\times34$ matrices & Calibration basis \\
+\midrule
+1 --- Commodity price & 8 & 8 & 1\% price perturbation, 8 commodities \\
+2 --- Partner growth & $\approx 17$ ($\mathcal{K}$) & $\approx 17$ & 1\%
+  export-demand perturbation, tradable sectors only \\
+3 --- Domestic demand & 52 & 52 & 1\% domestic-demand perturbation, all
+  sectors \\
+\midrule
+\textbf{Total} & & $\approx 77$ & \\
+\bottomrule
+\end{tabular}
+\caption{Elasticity-calibration scope across the three themes. This is the
+CGE-modeling workload, supplied externally by the model developer; it is
+not automated by the data-retrieval pipeline described in this document.}
+\label{tab:elasticity-scope}
+\end{table}
+
+\section{Aggregation Across Themes}
+\label{sec:aggregation}
+
+Each theme's contribution to the percentage employment change in cell
+$(i,r)$ is:
+\begin{align}
+  E_{i,r}^{(1)} &= \sum_{j=1}^{8} \eta_{i,r,j}^{(1)} \cdot x_j,
+  \label{eq:E1} \\
+  E_{i,r}^{(2)} &= \sum_{k \in \mathcal{K}} \eta_{i,r,k}^{(2)} \cdot q_k^T,
+  \qquad q_k^T = \sum_{c} w_{k,c} \cdot d^g_c,
+  \label{eq:E2} \\
+  E_{i,r}^{(3)} &= \sum_{m=1}^{52} \eta_{i,r,m}^{(3)} \cdot
+  \left(g_{m,t}^{yoy} - \bar g_{m,t}\right).
+  \label{eq:E3}
+\end{align}
+The total percentage employment effect is the simple sum across themes:
+\begin{equation}
+  E_{i,r} = E_{i,r}^{(1)} + E_{i,r}^{(2)} + E_{i,r}^{(3)}.
+  \label{eq:Etotal}
+\end{equation}
+
+This inherits the additive-separability assumption at two nested levels:
+across shocks \emph{within} a theme (Equations~\eqref{eq:E1}--\eqref{eq:E3}),
+and across the three \emph{themes} themselves (Equation~\eqref{eq:Etotal}).
+Both levels assume no interaction effects between simultaneously active
+shocks --- discussed further in Section~\ref{sec:limitations}.
+
+\section{Severity-Weighted Heatmap}
+\label{sec:heatmap}
+
+$E_{i,r}$ alone is a \emph{percentage} change, and so weights a large
+percentage shock to a small sector--province cell identically to the same
+percentage shock hitting a large cell --- the wrong lens for a \emph{risk}
+dashboard, which should foreground absolute headcount exposure. The primary
+heatmap output is therefore the absolute employment change:
+\begin{equation}
+  \Delta L_{i,r} = E_{i,r} \cdot L_{i,r}^{0},
+  \label{eq:DeltaL}
+\end{equation}
+where $L_{i,r}^0$ is the baseline (most recently observed) employment level
+in cell $(i,r)$, sourced from the same Input-Output table that supplies the
+sector and province dimensions (Section~\ref{sec:classification}), or from a
+more frequently updated labor-force survey if available --- in which case
+the vintage difference between $L_{i,r}^0$'s source and the SAM's base year
+should be tagged explicitly in metadata, since using two different-vintage
+sources silently is a hidden inconsistency.
+
+$\Delta L_{i,r}$ is rendered as the dashboard's primary heatmap (color
+intensity proportional to magnitude, with sign indicating job gains vs.\
+losses); $E_{i,r}$ (the pure percentage figure) is retained as a
+secondary/tooltip layer, since ``where is the biggest percentage shock'' and
+``where is the biggest headcount exposure'' are different and both useful
+questions for a policy user to be able to ask.
+
+\section{Computational Architecture: ``Press Update'' Logic}
+\label{sec:architecture}
+
+\begin{enumerate}
+  \item \textbf{Theme 1.} For each of the 8 commodities, check the latest
+  available value from its source (World Bank Pink Sheet monthly file, or
+  FRED/EIA daily API for oil/gas) against the last cached value. If newer,
+  fetch and recompute $x_j$ via Equation~\eqref{eq:theme1-xj}.
+  \item \textbf{Theme 2.} Check whether a new IMF WEO vintage has been
+  published since the last cached release (April / September-October /
+  January). If so, re-pull $d^g_c$ for all relevant countries via the IMF
+  SDMX API and recompute $q_k^T$ for each $k \in \mathcal{K}$ using
+  Equation~\eqref{eq:theme2-agg}, combined with the cached export-share
+  weights $w_{k,c}$ (these are recomputed on a much slower, e.g.\ annual,
+  cadence from Comtrade/BPS trade data --- not on every refresh).
+  \item \textbf{Theme 3.} Construct the expected SPE zip URL for the current
+  month; check existence/freshness against the cached vintage; if newer,
+  download, unzip, append the new month's category-level yoy figures to the
+  trailing panel, and recompute $\bar g_{i,t}$ and $x_i$ for all seven IPR
+  categories via Equation~\eqref{eq:theme3-shock}.
+  \item \textbf{Multiply and aggregate.} Each theme's shock vector is
+  multiplied against its respective pre-stored elasticity tensor (a tensor
+  contraction, not a CGE solve), summed across themes
+  (Equation~\eqref{eq:Etotal}), and scaled by baseline employment
+  (Equation~\eqref{eq:DeltaL}).
+  \item \textbf{Render.} The resulting $\Delta L_{i,r}$ matrix is rendered as
+  the heatmap; $E_{i,r}$ is exposed as supplementary detail.
+\end{enumerate}
+
+\begin{decisionbox}
+The elasticity tensors themselves (Section~\ref{sec:elasticity-scope}, the
+slow and expensive part of the whole pipeline) are \textbf{never recomputed
+on refresh}. They are supplied externally by the model developer from
+IndoTERM runs and only need to be re-supplied when the CGE model, its
+closures, or the base-year SAM change --- not on any dashboard-refresh
+cadence.
+\end{decisionbox}
+
+\section{Assumptions and Known Limitations}
+\label{sec:limitations}
+
+\begin{itemize}
+  \item \textbf{Local linearity.} Each $\eta^{(\theta)}_{i,r,j}$ is the slope
+  measured at a 1\% perturbation, applied as though constant for any
+  observed magnitude of $x_j$. CGE responses are generally nonlinear once
+  closures bind differently at different shock sizes --- for instance, the
+  dual labor-market closure (rigid-wage/quantity-adjusting formal
+  manufacturing vs.\ underemployment-absorbing informal sectors) may not
+  respond proportionally as shock size grows. Historical shocks of genuine
+  interest (large coal, CPO, or nickel price swings; sizable WEO forecast
+  revisions during global downturns) are frequently far outside the small
+  neighborhood in which a 1\%-calibrated slope is guaranteed to extrapolate
+  cleanly.
+  \item \textbf{Additive separability, within and across themes.} Summing
+  across shocks within a theme, and summing across the three themes
+  (Section~\ref{sec:aggregation}), both assume the absence of interaction
+  effects. This holds only approximately under genuine joint
+  general-equilibrium market clearing, and the approximation degrades when
+  multiple shocks load on the same factor or sector simultaneously --- e.g.\
+  Theme 1's TGF export-price shock and Theme 3's Sandang domestic-demand
+  shock both affecting Textiles employment in the same period, with no
+  cross-term capturing their joint effect.
+  \item \textbf{Theme-specific elasticities, no cross-theme reuse} (see
+  Section~\ref{sec:elasticity-scope} for full justification). This roughly
+  triples the CGE-calibration workload relative to a design that shares one
+  elasticity tensor per sector across all themes, but avoids silently
+  assuming that domestic-demand and export shocks propagate identically.
+  \item \textbf{Theme 3's shock is national, not regional}
+  (Section~\ref{sec:theme3-regional}). Genuine sub-national divergence in
+  domestic demand --- one province's retail sector softening while
+  another's strengthens --- is not captured; only the elasticity side of
+  Theme 3 varies by province.
+  \item \textbf{IPR's internal deflation is taken at face value.} If Bank
+  Indonesia's real-sales deflator imperfectly isolates volume from price
+  effects, some residual price-driven noise could leak into Theme 3's shock
+  construction. This is an openly stated simplification, not independently
+  re-verified against CPI in this version.
+  \item \textbf{Unit pass-through in Theme 2.} A 1pp growth-forecast revision
+  is assumed to produce exactly a 1\% export-demand change, uniformly across
+  products and countries, with no separately estimated income elasticity.
+  True elasticities frequently differ from 1, especially for
+  industrial/commodity exports.
+  \item \textbf{Time-invariant elasticities and baseline employment between
+  refreshes.} Both $\eta^{(\theta)}_{i,r,j}$ and $L_{i,r}^0$ are held fixed
+  until the user manually recalibrates IndoTERM or re-sources employment
+  data; an explicit recalibration cadence for each, and explicit vintage
+  tagging where sources differ, should be defined rather than left implicit.
+  \item \textbf{Heterogeneous epistemic status of inputs across themes.}
+  Theme 1's inputs are CGE-simulated structural elasticities applied to
+  directly observed world prices. Theme 2 combines a CGE-simulated
+  elasticity with an unestimated unit-pass-through assumption. Theme 3
+  combines a CGE-simulated elasticity with an empirical trend-deviation
+  measure subject to a deflation-quality caveat. A dashboard user should not
+  be given the impression that all three carry the same epistemic weight.
+  \item \textbf{Discrete, low-frequency refresh for Theme 2 specifically.}
+  Unlike Themes 1 and 3, which can in principle update monthly or even
+  daily, Theme 2's $d^g_c$ only changes 3 times per year (WEO release
+  schedule) --- the dashboard should communicate this vintage explicitly
+  rather than implying continuous freshness.
+  \item \textbf{No joint re-solve benchmarking yet.} There is currently no
+  periodic check of the full linear-additive approximation
+  (Equation~\eqref{eq:Etotal}) against a true joint CGE re-solve under
+  realistic, simultaneously active multi-theme shock combinations. Before
+  any high-stakes policy communication, this benchmark should be run to
+  establish an empirical error bound on the approximation.
+\end{itemize}
+
+\section{Future Work}
+\label{sec:future}
+
+\begin{itemize}
+  \item \textbf{Retire the linear shortcut entirely, rather than patch it.}
+  The calibrate-once-and-multiply design (Sections~\ref{sec:theme1}--\ref{sec:architecture})
+  is a deliberate stopgap, not the intended end state. Once IndoTERM can be
+  run live on a server with acceptable latency, the dashboard should move
+  from \emph{look up a pre-calibrated elasticity and multiply} to
+  \emph{solve the full CGE on the actual observed combination of shocks on
+  every refresh}. This removes the linearity and additive-separability
+  assumptions in Section~\ref{sec:limitations} outright, rather than
+  approximating around them with interaction terms or quadratic
+  corrections. Server sizing, solve time, and a queuing/caching strategy for
+  concurrent users are the open questions for that transition, to be scoped
+  as a separate piece of work.
+  \item \textbf{Two-point calibration check for Theme 1.} For commodities
+  with historically large price swings (coal, CPO, nickel), additionally
+  calibrate at a 10\% perturbation and compare the implied slope to the
+  1\%-calibrated $\eta$. If stable, the linear extrapolation is empirically
+  supported for that commodity; if not, fit a quadratic correction term
+  using the two calibration points.
+  \item \textbf{Estimate product/country-specific elasticities for Theme 2}
+  in place of the unit-pass-through assumption, via a log-log regression of
+  historical Comtrade export values against historical partner GDP growth,
+  by product.
+  \item \textbf{Sub-national domestic-demand data for Theme 3,} if/when a
+  province-level consumption proxy becomes available (e.g.\ BPS's Susenas
+  household expenditure survey) --- though Susenas's much lower publication
+  frequency relative to IPR's monthly cadence would require its own
+  treatment, not a simple substitution.
+  \item \textbf{Interaction terms across themes,} for sectors confirmed to
+  be jointly and materially hit by more than one theme simultaneously, once
+  the re-solve benchmarking in Section~\ref{sec:limitations} quantifies how
+  large the currently-omitted interaction error actually is in practice.
+\end{itemize}
+
+\section{Open Items Requiring Further User Input}
+\label{sec:open-items}
+
+\begin{itemize}
+  \item Verify $\mathcal{K}$ (Section~\ref{sec:theme2-K}) row-by-row against
+  actual export/output ratios in the 52-sector Input-Output table; the list
+  given is a category-level estimate, not yet confirmed.
+  \item Choose the export-share threshold defining $\mathcal{K}$ (1\%? 5\%?
+  another value?) --- not yet decided.
+  \item Complete the manual mapping of IPR's seven categories onto the
+  52-sector classification (Section~\ref{sec:theme3-mapping}); some
+  categories may legitimately split across more than one sector.
+  \item Specify the source and vintage for $L_{i,r}^0$ (baseline
+  employment); not yet finalized, and should be tagged with its own update
+  cadence, potentially distinct from the IndoTERM SAM's base year.
+\end{itemize}
+
+\end{document}
