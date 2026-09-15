@@ -595,12 +595,12 @@ def province_map(prov_dict, title, height=220, unit="ΔL (tenaga kerja)", zoom=2
             for f in geo["features"]]
     df  = pd.DataFrame(rows)
     fmt = ":.2f" if unit.startswith("E") else ":,.0f"
-    fig = px.choropleth_mapbox(
+    fig = px.choropleth_map(
         df, geojson=geo,
         locations="province", featureidkey="properties.province",
         color="value",
         color_continuous_scale=CGE_SCALE, color_continuous_midpoint=0,
-        mapbox_style="carto-positron",
+        map_style="carto-positron",
         zoom=zoom, center={"lat":-2.5,"lon":118}, opacity=0.88,
         hover_name="province",
         hover_data={"value": fmt},
@@ -831,7 +831,7 @@ if st.session_state.agg is None:
 # ─── Sidebar ──────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("### EPM")
-    if st.button("🔄 Perbarui Data", type="primary", use_container_width=True):
+    if st.button("🔄 Perbarui Data", type="primary", width="stretch"):
         with st.spinner("Mengambil & menghitung…"):
             try:
                 rr  = refresh_run(verbose=False)
@@ -936,20 +936,20 @@ with tab_ov:
         with p1:
             pd_ = _prov_pct_dict(agg,"overall") if use_e else _prov_dict(agg,"overall")
             fig = province_map(pd_, "Dampak Keseluruhan  (T1 + T2 + T3)", unit=unit)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="ov_map_overall")
+            if fig: st.plotly_chart(fig, width="stretch", key="ov_map_overall")
         with p2:
             pd_ = _prov_pct_dict(agg,"t1_total") if use_e else _prov_dict(agg,"t1_total")
             fig = province_map(pd_, "Dampak T1 — Harga Komoditas Utama", unit=unit)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="ov_map_t1")
+            if fig: st.plotly_chart(fig, width="stretch", key="ov_map_t1")
         p3, p4 = st.columns(2)
         with p3:
             pd_ = _prov_pct_dict(agg,"t2_total") if use_e else _prov_dict(agg,"t2_total")
             fig = province_map(pd_, "Dampak T2 — Perubahan Kondisi Ekonomi Mitra Dagang", unit=unit)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="ov_map_t2")
+            if fig: st.plotly_chart(fig, width="stretch", key="ov_map_t2")
         with p4:
             pd_ = _prov_pct_dict(agg,"t3_total") if use_e else _prov_dict(agg,"t3_total")
             fig = province_map(pd_, "Dampak T3 — Kondisi Permintaan Domestik", unit=unit)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="ov_map_t3")
+            if fig: st.plotly_chart(fig, width="stretch", key="ov_map_t3")
 
         # ── Heatmaps ─────────────────────────────────────────────────────────
         st.markdown(sl("Matriks 52 × 34 Sektor-Provinsi"), unsafe_allow_html=True)
@@ -970,7 +970,7 @@ with tab_ov:
                         st.plotly_chart(
                             heatmap(mat, agg["sect_order"], agg["prov_order"],
                                     f"{title}  [{u}]", unit=u, show_ylabels=show_y),
-                            use_container_width=True, key=f"ov_heat_{dk}")
+                            width="stretch", key=f"ov_heat_{dk}")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # COMMODITIES (T1)
@@ -1005,7 +1005,7 @@ with tab_t1:
         with mp:
             pd_ = _prov_pct_dict(agg,"t1_total") if use_e else _prov_dict(agg,"t1_total")
             fig = province_map(pd_, "T1 — Dampak per Provinsi", height=300, unit=unit, zoom=3.2)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="t1_map")
+            if fig: st.plotly_chart(fig, width="stretch", key="t1_map")
 
         st.markdown(sl("Matriks Per Komoditas  (52 × 34)"), unsafe_allow_html=True)
         t1_kl = [("t1_total", "T1 Total — semua komoditas")] + \
@@ -1020,7 +1020,7 @@ with tab_t1:
                         st.plotly_chart(heatmap(mat, agg["sect_order"], agg["prov_order"],
                                                 f"Dampak {lbl}  [{u}]", unit=u,
                                                 show_ylabels=(j == 0)),
-                                        use_container_width=True, key=f"t1_heat_{dl_key}")
+                                        width="stretch", key=f"t1_heat_{dl_key}")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PARTNERS (T2)
@@ -1053,14 +1053,14 @@ with tab_t2:
         with mp:
             pd_ = _prov_pct_dict(agg,"t2_total") if use_e else _prov_dict(agg,"t2_total")
             fig = province_map(pd_, "T2 — Dampak per Provinsi", height=300, unit=unit, zoom=3.2)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="t2_map")
+            if fig: st.plotly_chart(fig, width="stretch", key="t2_map")
 
         st.markdown(sl("T2 Total  (52 × 34)"), unsafe_allow_html=True)
         mat, u = _mat_and_label(agg, "t2_total", use_e)
         if mat is not None:
             st.plotly_chart(heatmap(mat, agg["sect_order"], agg["prov_order"],
                                     f"Dampak T2 Total — perubahan kondisi ekonomi mitra dagang  [{u}]", unit=u),
-                            use_container_width=True, key="t2_heat_total")
+                            width="stretch", key="t2_heat_total")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # DOMESTIC (T3)
@@ -1097,7 +1097,7 @@ with tab_t3:
         with mp:
             pd_ = _prov_pct_dict(agg,"t3_total") if use_e else _prov_dict(agg,"t3_total")
             fig = province_map(pd_, "T3 — Dampak per Provinsi", height=300, unit=unit, zoom=3.2)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="t3_map")
+            if fig: st.plotly_chart(fig, width="stretch", key="t3_map")
 
         st.markdown(sl("Matriks Per Kategori IPR  (52 × 34)"), unsafe_allow_html=True)
         t3_kl = [("t3_total", "T3 Total — semua kategori IPR")] + \
@@ -1112,7 +1112,7 @@ with tab_t3:
                         st.plotly_chart(heatmap(mat, agg["sect_order"], agg["prov_order"],
                                                 f"Dampak {lbl}  [{u}]", unit=u,
                                                 show_ylabels=(j == 0)),
-                                        use_container_width=True, key=f"t3_heat_{dl_key}")
+                                        width="stretch", key=f"t3_heat_{dl_key}")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # SIMULATOR
@@ -1155,7 +1155,7 @@ with tab_sim:
             t3_vals = {k: st.slider(lbl, -20.0, 20.0, 0.0, 0.5, key=f"sim_t3_{k}")
                        for k, lbl in T3_LABELS.items()}
 
-        submitted = st.form_submit_button("▶  Jalankan Simulasi", type="primary", use_container_width=True)
+        submitted = st.form_submit_button("▶  Jalankan Simulasi", type="primary", width="stretch")
 
     if submitted:
         try:
@@ -1192,22 +1192,22 @@ with tab_sim:
         with p1:
             fig = province_map(dict(zip(po, dl.sum(axis=0))),
                                "Dampak Simulasi — ΔL Tenaga Kerja", height=220)
-            if fig: st.plotly_chart(fig, use_container_width=True, key="sim_map_dl")
+            if fig: st.plotly_chart(fig, width="stretch", key="sim_map_dl")
         with p2:
             fig = province_map(dict(zip(po, E_.sum(axis=0))),
                                "Dampak Simulasi — Perubahan Tenaga Kerja (%)", height=220, unit="E (%)")
-            if fig: st.plotly_chart(fig, use_container_width=True, key="sim_map_e")
+            if fig: st.plotly_chart(fig, width="stretch", key="sim_map_e")
 
         st.markdown(sl("Matriks 52 × 34 Sektor-Provinsi"), unsafe_allow_html=True)
         c1, c2 = st.columns([3, 2])
         with c1:
             st.plotly_chart(heatmap(dl, so, po, f"Dampak Simulasi — ΔL Tenaga Kerja  [ΔL (tenaga kerja)]",
                                     unit="ΔL (tenaga kerja)", show_ylabels=True),
-                            use_container_width=True, key="sim_heat_dl")
+                            width="stretch", key="sim_heat_dl")
         with c2:
             st.plotly_chart(heatmap(E_, so, po, f"Dampak Simulasi — Perubahan (%)  [E (%)]",
                                     unit="E (%)", show_ylabels=False),
-                            use_container_width=True, key="sim_heat_e")
+                            width="stretch", key="sim_heat_e")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # METHODOLOGY & DATA
