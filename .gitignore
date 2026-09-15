@@ -20,8 +20,14 @@ data/cache/theme3/*.zip
 data/cache/theme1/*.xlsx
 data/cache/last_refresh.json
 
-# ── Elasticity CSV dumps (derived from eta_matrices.npz) ─────────────────────
-data/elasticity/csv/
+# ── Elasticity backups (placeholders kept locally only) ───────────────────────
+data/elasticity/csv_placeholder/
+data/elasticity/*_placeholder.*
+data/elasticity/csv.zip
+data/output_placeholder/
+
+# ── CGE model folders (GEMPACK binaries, databases, solutions; several GB) ───
+cge/
 
 # ── Large rawdata binaries ────────────────────────────────────────────────────
 rawdata/*.zip
