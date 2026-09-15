@@ -1278,7 +1278,10 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
             "185-sektor dasar (IND/COM). 34 provinsi sesuai dengan Tabel Input-Output Antarregion "
             "BPS (52 Industri × 34 Provinsi, 2016). Matriks ketenagakerjaan dasar L⁰ bersumber "
             "dari tabel yang sama. Empat provinsi Papua baru (2022) dikecualikan untuk "
-            "mempertahankan struktur 34 provinsi IndoTERM."
+            "mempertahankan struktur 34 provinsi IndoTERM. Simulasi kalibrasi dijalankan pada basis data "
+            "kerja <b>58 sektor</b> — 52 sektor ditambah pemisahan komoditas Tema 1 (batu bara, minyak mentah, "
+            "bijih nikel, bijih tembaga, minyak nabati, karet olahan, produk elektronik) — dan hasilnya "
+            "diagregasi kembali ke 52 sektor dengan bobot upah sektor-provinsi."
         ), unsafe_allow_html=True)
 
     # ── 2. KERANGKA MATEMATIKA ────────────────────────────────────────────────
@@ -1343,11 +1346,19 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
                 "Window 48 bulan dipilih untuk menghindari bias supercycle komoditas 2021–2022 "
                 "(window 60 bulan) sekaligus tidak terlalu pendek sehingga dipengaruhi crash pasca-COVID (36 bulan)."
             ), unsafe_allow_html=True)
+            st.markdown(_note(
+                "<b>Kalibrasi η<sup>(1)</sup>:</b> satu simulasi IndoTERM per komoditas dengan closure jangka pendek "
+                "(upah riil tetap, stok modal tetap, tenaga kerja menyesuaikan). Shock = kenaikan <b>1% harga dunia</b> "
+                "komoditas pada <em>kedua</em> sisi perdagangan: pergeseran kurva permintaan ekspor (fpexp_d) dan "
+                "harga impor CIF (pfimp), diterapkan pada sektor komoditas yang telah dipisahkan (mis. CPO → minyak nabati, "
+                "nikel → bijih nikel, elektronik → produk elektronik). Dilakukan <em>di luar</em> pipeline otomatis dan "
+                "hanya diulang jika model CGE, closure, atau tahun dasar berubah."
+            ), unsafe_allow_html=True)
             st.markdown(_warn(
-                "Kalibrasi elastisitas η<sup>(1)</sup> memerlukan solusi IndoTERM untuk masing-masing dari 7 "
-                "komoditas secara terpisah (perturbasi 1% pada harga komoditas tersebut). "
-                "Ini dilakukan <em>di luar</em> pipeline otomatis dan hanya perlu diulang jika model "
-                "CGE, closure rules, atau SAM base-year berubah."
+                "<b>Catatan nikel.</b> Dalam basis data IRIO 2016, bijih nikel tidak memiliki ekspor maupun impor "
+                "(larangan ekspor bijih), sehingga η<sup>(1)</sup> nikel ≈ 0 dan shock harga nikel saat ini praktis "
+                "tidak berdampak pada dashboard. Definisi shock nikel perlu ditinjau ulang, misalnya dialihkan ke "
+                "produk nikel olahan dalam Industri logam dasar."
             ), unsafe_allow_html=True)
         with t1c2:
             st.markdown(
@@ -1393,6 +1404,11 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
                 "<b>Set sektor tradable 𝒦 = 23 sektor</b> (dikunci berdasarkan Comtrade 2023, "
                 "ekspor Indonesia > USD 0,1 miliar). Sektor non-tradable (konstruksi, jasa, utilitas) "
                 "tidak memiliki eksposur ekspor yang berarti sehingga tidak dikejutkan oleh Tema 2."
+            ), unsafe_allow_html=True)
+            st.markdown(_note(
+                "<b>Kalibrasi η<sup>(2)</sup>:</b> satu simulasi per sektor 𝒦 dengan <b>pergeseran +1% kurva permintaan "
+                "ekspor</b> (fqexp_d) untuk seluruh sub-sektor 58 yang tergabung dalam sektor IO52 tersebut, "
+                "closure jangka pendek yang sama dengan Tema 1."
             ), unsafe_allow_html=True)
             st.markdown(_warn(
                 "WEO diterbitkan hanya <b>3 kali per tahun</b> (April, Oktober, dan Update Januari). "
@@ -1442,6 +1458,17 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
                 "x<sub>i,r</sub> per provinsi. Seluruh diferensiasi regional Tema 3 berasal dari tensor "
                 "elastisitas η<sup>(3)</sup><sub>i,r,m</sub> yang dikalibrasi penuh pada 52×34."
             ), unsafe_allow_html=True)
+            st.markdown(_note(
+                "<b>Kalibrasi η<sup>(3)</sup>:</b> satu simulasi per kategori SPE (8 kategori; semua sektor dalam "
+                "kategori dikejutkan bersamaan) dengan kenaikan <b>1% permintaan rumah tangga</b> atas komoditas terkait; "
+                "basis ‘permintaan domestik’ adalah pembelian rumah tangga, sesuai cakupan SPE sebagai survei "
+                "penjualan eceran. Karena TERM tidak memiliki pengubah permintaan rumah tangga per komoditas yang eksogen, "
+                "shock disalurkan lewat permintaan pemerintah: basis data diberi ‘benih’ permintaan pemerintah "
+                "sebesar 0,5% pembelian rumah tangga untuk setiap komoditas dan provinsi, lalu pengubah permintaan "
+                "pemerintah (fgov_s) dikejutkan dengan rasio spesifik provinsi sehingga tambahan permintaan tepat 1% dari "
+                "permintaan rumah tangga di provinsi itu. Sektor 32 Perdagangan kendaraan kosong dalam basis data "
+                "(tercatat sebagai margin) sehingga tidak dikejutkan."
+            ), unsafe_allow_html=True)
             st.markdown(_warn(
                 "Pipeline membutuhkan <b>minimal 48 bulan data historis</b> sebelum x<sub>i</sub> dapat "
                 "dihitung untuk pertama kali. Pembaruan awal memerlukan pengunduhan arsip SPE beberapa tahun "
@@ -1459,11 +1486,13 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
                         ["Peralatan ICT",                "27 OtherMan, 42 Telecom"],
                         ["Peralatan rumah tangga",       "16 WoodProd, 26 Furniture"],
                         ["Budaya & rekreasi",            "40 Hotels, 41 Restaurant, 52 OtherSvc"],
+                        ["Barang lainnya",               "17 PaperProd, 20 Chemical"],
                     ]
                 ),
                 unsafe_allow_html=True
             )
-            st.caption("24 dari 52 sektor dipetakan. 28 sektor lainnya tidak menerima shock Tema 3. "
+            st.caption("8 kategori SPE; 26 dari 52 sektor dipetakan, 26 sektor lainnya tidak menerima shock Tema 3. "
+                       "Indeks total SPE tidak dipakai (komposit dari kategori di atas). "
                        "Sumber data: Survei Penjualan Eceran (SPE), Bank Indonesia — ZIP bulanan, tanpa API key.")
 
     # ── 6. BEBAN KALIBRASI ELASTISITAS ────────────────────────────────────────
@@ -1481,13 +1510,13 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
                 ["Tema", "Jumlah shock", "Matriks 52×34", "Dasar kalibrasi"],
                 [
                     ["1 — Harga komoditas", "7", "7",
-                     "Perturbasi 1% harga komoditas, 7 komoditas secara terpisah"],
+                     "Kenaikan 1% harga dunia (sisi ekspor dan impor), 7 komoditas secara terpisah"],
                     ["2 — Pertumbuhan mitra", "23 (𝒦)", "23",
-                     "Perturbasi 1% permintaan ekspor, sektor tradable saja"],
-                    ["3 — Permintaan domestik", "52", "52",
-                     "Perturbasi 1% permintaan domestik, semua 52 sektor"],
-                    ["<b>Total</b>", "<b>82</b>", "<b>82</b>",
-                     "Semua matriks disuplai dari IndoTERM (di luar pipeline otomatis)"],
+                     "Pergeseran 1% kurva permintaan ekspor, per sektor tradable"],
+                    ["3 — Permintaan domestik", "8 (kategori SPE)", "8",
+                     "Kenaikan 1% permintaan rumah tangga per kategori SPE, sektor dalam kategori bersamaan"],
+                    ["<b>Total</b>", "<b>38</b>", "<b>38</b>",
+                     "Semua matriks dari simulasi IndoTERM closure jangka pendek (di luar pipeline otomatis)"],
                 ]
             ),
             unsafe_allow_html=True
@@ -1495,7 +1524,9 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
         st.markdown(_note(
             "Matriks elastisitas <em>tidak pernah dicompute ulang pada setiap refresh</em>. "
             "Disuplai oleh pengembang model dari run IndoTERM dan hanya perlu diganti jika "
-            "model CGE, closure rules, atau SAM base-year berubah."
+            "model CGE, closure rules, atau SAM base-year berubah. Setiap matriks adalah persentase perubahan "
+            "tenaga kerja efektif per industri-provinsi (variabel xlab_o) untuk shock 1%, diagregasi dari 58 ke 52 sektor "
+            "dengan bobot upah; matriks tersimpan sebagai CSV di data/elasticity/csv."
         ), unsafe_allow_html=True)
 
     # ── 7. ASUMSI DAN KETERBATASAN ────────────────────────────────────────────
@@ -1527,6 +1558,14 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
              "Keduanya tetap tetap hingga pengguna secara manual melakukan rekalibrasi IndoTERM atau "
              "memperbarui data ketenagakerjaan dasar. Cadence rekalibrasi yang eksplisit "
              "dan vintage-tagging harus didefinisikan."),
+            ("<b>Horizon jangka pendek.</b>",
+             "Closure kalibrasi menahan stok modal dan upah riil, sehingga seluruh penyesuaian jatuh pada "
+             "tenaga kerja. Elastisitas mencerminkan respons dalam horizon sekitar satu tahun, bukan "
+             "penyesuaian jangka panjang dengan relokasi modal."),
+            ("<b>Elastisitas nikel mendekati nol.</b>",
+             "Bijih nikel tidak memiliki perdagangan luar negeri dalam IRIO 2016, sehingga shock harga nikel "
+             "tidak menghasilkan dampak. Kanal nikel yang relevan (produk olahan di logam dasar) belum "
+             "direpresentasikan."),
             ("<b>Belum ada benchmarking joint re-solve.</b>",
              "Belum ada pemeriksaan periodik terhadap hasil aproksimasi linier-aditif "
              "(Σ tema) vs. solusi CGE penuh dengan kombinasi multi-tema shock yang realistis. "
@@ -1554,7 +1593,7 @@ Model dasar adalah IndoTERM, sebuah *computable general equilibrium* (CGE) multi
                 ["UN Comtrade",              "T2", "Nilai ekspor Indonesia per HS code, per negara tujuan", "REST API, key dari .env", "Tahunan (bobot w_{k,c})"],
                 ["SPE Bank Indonesia (ZIP)", "T3", "Indeks Penjualan Riil 7 kategori (Tabel 2 XLSX)", "ZIP bulanan, tanpa API key", "Bulanan"],
                 ["BPS lo.csv (statis)",      "All", "Ketenagakerjaan dasar L⁰ per sektor × provinsi", "File statis (rawdata/)", "Tidak berubah hingga rekalibrasi"],
-                ["IndoTERM (NPZ matrices)",  "All", "Matriks elastisitas η (~82 matriks 52×34)", "File statis (data/elasticity/)", "Tidak berubah hingga rekalibrasi CGE"],
+                ["IndoTERM (simulasi CGE)",  "All", "Matriks elastisitas η (38 matriks 52×34, CSV + NPZ)", "File statis (data/elasticity/)", "Tidak berubah hingga rekalibrasi CGE"],
             ]
         ),
         unsafe_allow_html=True
