@@ -269,6 +269,7 @@ meta = {
     "sector_order":    sect_order,
     "sector_labels":   [sect_names.get(i, f"s{i:02d}") for i in sect_order],
     "matrix_keys":     list(matrices.keys()),
+    "placeholder":     True,
     "base_elasticities": {
         "theme1": BASE_T1,
         "theme2": BASE_T2,

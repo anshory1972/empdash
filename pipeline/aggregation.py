@@ -171,7 +171,7 @@ def compute(refresh_result, verbose=True):
             "theme2": t2.get("vintages") if t2 else None,
             "theme3": t3["period"] if t3 else None,
         },
-        "placeholder": True,   # set to False when real CGE matrices loaded
+        "placeholder": meta.get("placeholder", False),
     }
 
     with open(os.path.join(OUT_DIR, "aggregation_meta.json"), "w") as f:
@@ -182,7 +182,7 @@ def compute(refresh_result, verbose=True):
             "E_min":        float(E.min()),
             "E_max":        float(E.max()),
             "dL_total":     float(dL.sum()),
-            "placeholder":  True,
+            "placeholder":  meta.get("placeholder", False),
         }, f, indent=2)
 
     return result
